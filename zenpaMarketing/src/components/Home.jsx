@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import img1 from '../assets/img1.jpg'
+
 
 
 export default function Home() {
