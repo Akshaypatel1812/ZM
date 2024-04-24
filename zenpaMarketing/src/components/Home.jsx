@@ -1,18 +1,37 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import img1 from '../assets/img1.jpg'
+
 
 export default function Home() {
   return (
     <div className="bg-gray-100 min-h-screen">
-      <header className="bg-white shadow">
-        <div className="container mx-auto px-4 py-6">
-          <h1 className="text-3xl font-bold text-gray-800">
+      <header className="bg-white shadow w-full  relative"
+     
+        style={{
+          backgroundImage:`url(${'https://img.freepik.com/free-photo/front-view-protective-glasses-with-hard-hat-headphones_23-2148773471.jpg?size=626&ext=jpg&ga=GA1.1.34264412.1713744000&semt=ais'})`,
+          backgroundRepeat:'no-repeat',
+          backgroundSize:'100% 100%',
+          backgroundAttachment:'fixed'
+        }}
+      >
+        <div className="container items-center mx-auto justify-center z-20"
+          style={{display:'flex',
+            flexDirection:'column',
+            height:'85vh',
+        }}
+          >
+          
+          <h1 className="text-center text-6xl font-bold text-white z-20 ">
             Welcome to Zenpa Marketing
           </h1>
-          <p className="text-gray-600 mt-2">
+          <p className="text-center text-2xl text-white mt-2 z-20">
             Your one-stop solution for fire safety equipment and services
           </p>
         </div>
+        <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+      
+
       </header>
       <main className="container mx-auto py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
