@@ -7,8 +7,13 @@ function ProductCard() {
         { id: 3, name: 'Fire Fighting Project Work', description: 'Our expert team ensures seamless execution from start to finish, providing peace of mind and expertise for your workplace safety.', image: 'https://static.wixstatic.com/media/dee124_c8e044aa786048f286e7066636afd0e5~mv2.png/v1/fill/w_560,h_400,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/dee124_c8e044aa786048f286e7066636afd0e5~mv2.png' },
         { id: 4, name: 'Eye Protection', description: 'Protect your vision with our reliable eye gear. Comfortable and effective, it ensures safety in any work environment.', image: 'https://images.pexels.com/photos/9242836/pexels-photo-9242836.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' },
         { id: 5, name: 'Respiratory Protection', description: 'Stay safe with our respiratory gear. Breathable and reliable, its essential for workplace protection.', image: 'https://ohsonline.com/-/media/OHS/OHS/Images/2021/05/terpin.jpg' },
-        { id: 6, name: 'Hand Protection', description: 'Keep your hands safe with our protective gear. Comfortable and durable, its essential for workplace safety.', image: 'https://assets-global.website-files.com/647888ca92d03e3fca3f1ea0/647888ca92d03e3fca3f2440_shutterstock_1547048333.jpg' }
+        { id: 6, name: 'Hand Protection', description: 'Keep your hands safe with our protective gear. Comfortable and durable, its essential for workplace safety.', image: 'https://assets-global.website-files.com/647888ca92d03e3fca3f1ea0/647888ca92d03e3fca3f2440_shutterstock_1547048333.jpg' },
+        { id: 5, name: 'Product 7', description: 'Description of Product 5', image: 'https://via.placeholder.com/300' },
+        { id: 7, name: 'Product 8', description: 'Description of Product 6', image: 'https://via.placeholder.com/300' },
+        { id: 8, name: 'Product 9', description: 'Description of Product 6', image: 'https://via.placeholder.com/300' },
     ];
+
+
 
     const handleBuyNow = (product) => {
         const ownerEmail = 'pak180301@gmail.com'; // Replace with your owner's email
