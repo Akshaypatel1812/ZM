@@ -10,7 +10,7 @@ function ProductCard() {
         { id: 6, name: 'Hand Protection', description: 'Keep your hands safe with our protective gear. Comfortable and durable, its essential for workplace safety.', image: 'https://assets-global.website-files.com/647888ca92d03e3fca3f1ea0/647888ca92d03e3fca3f2440_shutterstock_1547048333.jpg' },
         { id: 5, name: 'Product 7', description: 'Description of Product 5', image: 'https://via.placeholder.com/300' },
         { id: 7, name: 'Product 8', description: 'Description of Product 6', image: 'https://via.placeholder.com/300' },
-        { id: 8, name: 'Product 10', description: 'Description of Product 6', image: 'https://via.placeholder.com/300' },
+        { id: 8, name: 'Product 9', description: 'Description of Product 6', image: 'https://via.placeholder.com/300' },
     ];
 
 
