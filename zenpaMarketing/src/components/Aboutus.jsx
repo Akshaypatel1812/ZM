@@ -21,7 +21,8 @@ function AboutUs() {
       <div className="container mx-auto py-8">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white shadow-md rounded-lg p-6">
+            <div className="bg-white shadow-md rounded-lg p-6 bg-[url(zenpaMarketing\images\instant-settlement-bg.png)] w-full max-h-[300px] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200
+                hover:bg-[url(zenpaMarketing\images\instant-settlement-bghover.png)]">
               <h3 className="text-white bg-orange-700 mb-4 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none">
                 Established in Year 2023
               </h3>
@@ -31,7 +32,8 @@ function AboutUs() {
                 ensuring workplace safety and security.
               </p>
             </div>
-            <div className="bg-white shadow-md rounded-lg p-6">
+            <div className="bg-white shadow-md rounded-lg p-6 bg-[url(zenpaMarketing\images\instant-settlement-bg.png)] w-full max-h-[300px] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200
+                hover:bg-[url(zenpaMarketing\images\instant-settlement-bghover.png)]">
               <h3 className="text-white bg-orange-700 mb-4 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none">
                 Our Mission
               </h3>
@@ -40,7 +42,8 @@ function AboutUs() {
                 with exceptional service, to businesses of all sizes.
               </p>
             </div>
-            <div className="bg-white shadow-md rounded-lg p-6">
+            <div className="bg-white shadow-md rounded-lg p-6 bg-[url(zenpaMarketing\images\instant-settlement-bg.png)] w-full max-h-[300px] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200
+                hover:bg-[url(zenpaMarketing\images\instant-settlement-bghover.png)]">
               <h3 className="text-white bg-orange-700 mb-4 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none">
                 Our Vision
               </h3>

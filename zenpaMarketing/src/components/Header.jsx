@@ -2,6 +2,13 @@ import React from 'react';
 import {Link,NavLink} from 'react-router-dom'
 
 export default function Header() {
+
+    const scrollToAbout = () => {
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) {
+          aboutSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
     return (
         <header className="shadow sticky z-50 top-0">
             <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
@@ -18,8 +25,10 @@ export default function Header() {
                         <Link
                             to="/Products"
                             className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+                            
                         >
                             Our Products
+                        
                         </Link>
                     </div>
                     <div
@@ -41,14 +50,15 @@ export default function Header() {
 
                             <li>
                                 <NavLink
-                                to="/aboutUs"
+                                    to="/aboutUs"
+                                    onClick={scrollToAbout}
                                     className={({isActive}) =>
-                                        `${isActive? "text-orange-700" : "text-gray-700"} block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                    `${isActive? "text-orange-700" : "text-gray-700"} block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
                                 >
-                                    About
+                                    About Us
                                 </NavLink>
-                            </li>
+                                </li>
 
                             <li>
                                 <NavLink
@@ -63,12 +73,12 @@ export default function Header() {
 
                             <li>
                                 <NavLink
-                                to="/git"
+                                to="/location"
                                     className={({isActive}) =>
                                         `${isActive? "text-orange-700" : "text-gray-700"} block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
                                 >
-                                    Github
+                                    Visit Us
                                 </NavLink>
                             </li>
 
