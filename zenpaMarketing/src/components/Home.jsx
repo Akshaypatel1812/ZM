@@ -84,27 +84,27 @@ export default function Home() {
             <div className="flex  w-full flex-wrap items-center text-left mx-5 overflow-hidden"
             >
               <div className=" w-1/2  justify-between" style={{marginTop:'5vw'}}>
-                <h1 className="text-3xl font-semibold">1. Specialists in Industrial Fire Safety <br/>Equipment</h1>
-                <p  className="text-gray-600 text-2xl mt-4">Zenpa Marketing offers top industrial fire safety equipment for peace of mind in hazardous workplaces.</p>
+                <h1 className="text-2xl font-semibold">1. Specialists in Industrial Fire Safety Equipment</h1>
+                <p  className="text-gray-600 text-1xl mt-4">Zenpa Marketing offers top industrial fire safety equipment for peace of mind in hazardous workplaces.</p>
               </div>
 
               <div className="w-1/2  justify-between" style={{marginTop:'5vw'}}>
-                <h1 className="text-3xl font-semibold">2. Expert Project Management for Fire Safety Implementations</h1>
-                <p  className="text-gray-600 text-2xl mt-4">We provides equipment & comprehensive project management for seamless fire safety implementations
+                <h1 className="text-2xl font-semibold">2. Expert Project Management for Fire Safety Implementations</h1>
+                <p  className="text-gray-600 text-1xl mt-4">We provides equipment & comprehensive project management for seamless fire safety implementations
 </p>
               </div>
   
             <div className="w-1/2  justify-between" style={{marginTop:'5vw'}}>
-                <h1 className="text-3xl font-semibold">3. Efficient Fire NOC & Documentation Services</h1>
-                <p  className="text-gray-600 text-2xl mt-4">Zenpa Marketing simplifies fire compliance regulations, making obtaining Fire NOCs and meeting regulatory requirements effortless for your workplace.</p>
+                <h1 className="text-2xl font-semibold">3. Efficient Fire NOC & Documentation Services</h1>
+                <p  className="text-gray-600 text-1xl mt-4">Zenpa Marketing simplifies fire compliance regulations, making obtaining Fire NOCs and meeting regulatory requirements effortless for your workplace.</p>
               </div>
               
               <div className="w-1/2 justify-between" style={{marginTop:'5vw'}}>
-                <h1 className="text-3xl font-semibold">4. Clear and Compliant Safety Signboards</h1>
-                <p  className="text-gray-600 text-2xl mt-4">Zenpa Marketing provides clear, compliant safety signboards tailored to your workplace, ensuring optimal safety with appropriate signage for emergencies and hazards.</p>
+                <h1 className="text-2xl font-semibold">4. Clear and Compliant Safety Signboards</h1>
+                <p  className="text-gray-600 text-1xl mt-4">Zenpa Marketing provides clear, compliant safety signboards tailored to your workplace, ensuring optimal safety with appropriate signage for emergencies and hazards.</p>
               </div>            
             </div>
-            <h1 className="text-2xl mt-12 text-black">At Zenpa Marketing, we are committed to ensuring the safety and security of your workplace. Choose us for unmatched expertise, top-quality products, and exceptional service that puts your safety first.</h1>
+            <h1 className="text-1xl mt-12 text-black">At Zenpa Marketing, we are committed to ensuring the safety and security of your workplace. Choose us for unmatched expertise, top-quality products, and exceptional service that puts your safety first.</h1>
           </div>
         
     </div>
