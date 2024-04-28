@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+#nav::after{
+    background-color: black;
+    content: '';
+    display: block;
+    border-bottom: 3px;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(194 65 12);
+    transition: width .3;
+}
+
+#nav:hover::after{
+    width: 100%;
+    transition: width .3s;
+}

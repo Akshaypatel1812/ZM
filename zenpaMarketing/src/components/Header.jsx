@@ -43,7 +43,7 @@ export default function Header() {
                                          
                                         `${isActive? "text-orange-700" : "text-gray-700"} block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
-                                >
+                                id='nav'>
                                     Home
                                 </NavLink>
                             </li>
@@ -55,7 +55,8 @@ export default function Header() {
                                     className={({isActive}) =>
                                     `${isActive? "text-orange-700" : "text-gray-700"} block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
-                                >
+                                    id='nav'
+                               >
                                     About Us
                                 </NavLink>
                                 </li>
@@ -66,7 +67,8 @@ export default function Header() {
                                     className={({isActive}) =>
                                         `${isActive? "text-orange-700" : "text-gray-700"} block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
-                                >
+                                    id='nav'
+                               >
                                     Contact Us
                                 </NavLink>
                             </li>
@@ -77,6 +79,7 @@ export default function Header() {
                                     className={({isActive}) =>
                                         `${isActive? "text-orange-700" : "text-gray-700"} block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
+                                    id='nav'
                                 >
                                     Visit Us
                                 </NavLink>
