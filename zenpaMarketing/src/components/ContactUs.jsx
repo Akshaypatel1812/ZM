@@ -43,7 +43,7 @@ const ContactUs = () => {
         <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
       </header>
       <div className="container mx-auto py-8">
-        <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
+        <h1 className="text-3xl font-bold mb-4">Reach Out</h1>
         <div className="mb-4">
           <p className="mb-2">
             Call us at:{" "}
