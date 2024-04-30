@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactUs = () => {
   const phoneNumber = "+91-9054823690";
-  const emailAddress = "pak180301@gmail.com"; // Your email address
+  const emailAddress = "pak180301@gmail.com";
   const linkedInProfile = "https://www.linkedin.com/company/zenpa-marketing/";
 
   const handleCall = () => {
@@ -18,77 +18,53 @@ const ContactUs = () => {
   };
 
   return (
-    <div>
+    <div className="bg-gray-100 min-h-screen flex flex-col justify-center items-center">
       <header
-        className="bg-white shadow w-full relative"
+        className="bg-white w-full py-8 md:py-16 relative"
         style={{
-          backgroundImage: `url(${"https://admin.aankalan.app/img/gif/contact-us.gif"})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "100% 100%",
-          backgroundAttachment: "fixed",
-          
+          backgroundImage: `url("https://admin.aankalan.app/img/gif/contact-us.gif")`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          zIndex: 0,
         }}
       >
-        <div
-          className="container items-center mx-auto justify-center z-20"
-          style={{ display: "flex", flexDirection: "column", height: "70vh" }}
-        >
-          <h1 className="text-center text-6xl font-bold text-white z-20 ">
-             Contact Us For Safety Services
-          </h1>
-          <p className="text-center text-2xl text-white mt-2 z-20">
-            Your one-stop solution for fire safety equipment and services
-          </p>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="container mx-auto text-center relative z-10">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Get in Touch</h1>
+          <p className="text-lg md:text-xl text-white">Your one-stop solution for fire safety equipment and services</p>
         </div>
-        <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
       </header>
-      <div className="container mx-auto py-8">
-        <h1 className="text-3xl font-bold mb-4">Reach Out</h1>
-        <div className="mb-4">
-          <p className="mb-2">
-            Call us at:{" "}
-            <a href={`tel:${phoneNumber}`} className="text-blue-500">
-              {phoneNumber}
-            </a>
-          </p>
-          <button
-            onClick={handleCall}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Call Now
-          </button>
-        </div>
-        <div className="mb-4">
-          <p className="mb-2">
-            Email us at:{" "}
-            <a href={`mailto:${emailAddress}`} className="text-blue-500">
-              {emailAddress}
-            </a>
-          </p>
-          <button
-            onClick={handleEmail}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Email Now
-          </button>
-        </div>
-        <div>
-          <p className="mb-2">
-            Connect with us on LinkedIn:{" "}
-            <a
-              href={linkedInProfile}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500"
+      <div className="container mx-auto px-4 py-8 flex flex-col items-center justify-center z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h2 className="text-2xl font-semibold mb-4 text-gray-800">Call Us</h2>
+            <p className="text-lg mb-4 text-gray-700">{phoneNumber}</p>
+            <button
+              onClick={handleCall}
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full transition duration-300"
             >
-              LinkedIn Profile
-            </a>
-          </p>
+              Call Now
+            </button>
+          </div>
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h2 className="text-2xl font-semibold mb-4 text-gray-800">Email Us</h2>
+            <p className="text-lg mb-4 text-gray-700">{emailAddress}</p>
+            <button
+              onClick={handleEmail}
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full transition duration-300"
+            >
+              Email Now
+            </button>
+          </div>
+        </div>
+        <div className="mt-8">
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800">Connect with Us</h2>
+          <p className="text-lg mb-4 text-gray-700">Find us on LinkedIn:</p>
           <button
             onClick={handleLinkedIn}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300"
           >
-            LinkedIn
+            LinkedIn Profile
           </button>
         </div>
       </div>
