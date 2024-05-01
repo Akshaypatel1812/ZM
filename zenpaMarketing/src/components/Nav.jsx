@@ -11,57 +11,37 @@ import {
 const activeClassName = "selected navlink";
 
 const NavLinks = () => {
-  return (
-    <>
-      <NavLink
-        to="/"
-        className={({ isActive }) =>
-          `${isActive ? "text-orange-700" : "text-gray-700"} `
-        }
-        id="nav"
-      >
-        Home
-      </NavLink>
-      <NavLink
-        to="/aboutUs"
-        className={({ isActive }) =>
-          `${isActive ? "text-orange-700" : "text-gray-700"}`
-        }
-        id="nav"
-      >
-        About Us
-      </NavLink>
-      <NavLink
-        to="/ContactUs"
-        className={({ isActive }) =>
-          `${isActive ? "text-orange-700" : "text-gray-700"}`
-        }
-        id="nav"
-      >
-        Contact Us
-      </NavLink>
-      <NavLink
-        to="/location"
-        className={({ isActive }) =>
-          `${isActive ? "text-orange-700" : "text-gray-700"}`
-        }
-        id="nav"
-      >
-        Visit Us
-      </NavLink>
-      <NavLink
-        to="/Products"
-        className={({ isActive }) =>
-          `${
-            isActive ? "text-orange-700" : "text-gray-700"
-          } text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm  px-5 mt-[-0.35rem] py-2  mr-2 focus:outline-none`
-        }
-      >
-        Our Products
-      </NavLink>
-    </>
-  );
-};
+    return (
+        <>
+             <NavLink to='/' 
+            className={({isActive}) =>
+                                         
+            `${isActive? "text-orange-700" : "text-gray-700"} ` }
+            id='nav'
+        >Home</NavLink>
+        <NavLink to='/aboutUs' className={({isActive}) =>
+                                         
+                                         `${isActive? "text-orange-700" : "text-gray-700"}`}
+                                         id='nav'
+                                         >About Us</NavLink>
+        <NavLink to='/ContactUs' className={({isActive}) =>
+                                         
+                                         `${isActive? "text-orange-700" : "text-gray-700"}`}
+                                         id='nav'
+                                         >Contact Us</NavLink>
+        <NavLink to='/location' className={({isActive}) =>
+                                         
+                                         `${isActive? "text-orange-700" : "text-gray-700"}`}
+                                         id='nav'
+                                         >Visit Us</NavLink>
+        <NavLink to='/Products' className={({isActive}) =>
+                                         
+                                         `${isActive? "text-orange-700" : "text-gray-700"} text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm  px-5 mt-[-0.35rem] py-2  mr-2 focus:outline-none`}
+                                         
+                                         >Our Products</NavLink>
+        </>
+    )
+}
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
