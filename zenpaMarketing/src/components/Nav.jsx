@@ -56,7 +56,7 @@ const Nav = () =>{
 
     return (
         <>     
-    <nav  className="w-5/12 flex justify-end mr-2">
+    <nav  className="w-5/12 flex justify-end mr-4">
        <div className="  hidden  w-full  justify-between md:flex  ">
             <NavLinks/>
        </div>
