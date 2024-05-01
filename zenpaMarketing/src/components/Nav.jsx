@@ -78,7 +78,7 @@ const Nav = () =>{
             variants={mobileNavContainerVariant}
             initial="hidden"
             animate="show"
-            className="mt-4 basis-full md:hidden"
+            className="mt-4 basis-full  flex-col flex items-center  md:hidden"
           >
             <motion.div variants={mobileNavListVariant} {...mobileNavExitProps}>
               <NavLink to="/" className={({isActive}) =>
