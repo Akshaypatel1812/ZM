@@ -1,17 +1,16 @@
-// Layout.js
-import React from 'react';
-import { Outlet } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import ScrollToTop from './ScrollToTop'; // Import ScrollToTop component
+import { Outlet } from "react-router-dom";
+// import Header from "./components/Header";
+import Head from './components/head'
+import Footer from "./components/Footer";
+import ScrollToTop from './ScrollToTop'
 
 function Layout() {
   return (
     <>
-      <ScrollToTop /> {/* Render ScrollToTop inside Layout */}
-      <Header />
-      <Outlet />
-      <Footer />
+        <ScrollToTop/>
+        <Head />
+        <Outlet />
+        <Footer />
     </>
   );
 }
