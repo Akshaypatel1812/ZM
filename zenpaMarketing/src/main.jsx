@@ -9,15 +9,6 @@ import Aboutus from './components/Aboutus.jsx';
 import Products from './components/Products.jsx';
 import Location from './components/Location.jsx';
 
-const ScrollToTop = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]); // Reset scroll whenever the pathname changes
-
-  return null;
-};
 
 const router = createBrowserRouter(
   createRoutesFromElements(
