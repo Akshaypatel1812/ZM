@@ -11,11 +11,16 @@ export default function Home() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "100% 100%",
           backgroundAttachment: "fixed",
+          height: "75vh", // Initial height for desktop view
+          // Media query for mobile view
+          "@media (max-width: 768px)": {
+            height: "45vh", // Adjusted height for mobile view
+          },
         }}
       >
         <div
           className="container items-center mx-auto justify-center z-20"
-          style={{ display: "flex", flexDirection: "column", height: "85vh" }}
+          style={{ display: "flex", flexDirection: "column", height: "75vh" }}
         >
           <h1 className="text-center text-6xl font-bold text-white z-20 ">
             Welcome to Zenpa Marketing
