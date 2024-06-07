@@ -4,17 +4,19 @@ import { Link, NavLink } from "react-router-dom";
 export default function Home() {
   return (
     <div className="bg-gray-100 min-h-screen">
-      <header
-        className="bg-white shadow w-full  relative"
+      {/* <header
+        className="bg-white shadow w-full relative"
         style={{
           backgroundImage: `url(${"https://img.freepik.com/free-photo/front-view-protective-glasses-with-hard-hat-headphones_23-2148773471.jpg?size=626&ext=jpg&ga=GA1.1.34264412.1713744000&semt=ais"})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: "100% 100%",
+          backgroundSize: "100% 100%", // Initial background size
           backgroundAttachment: "fixed",
           height: "75vh", // Initial height for desktop view
           // Media query for mobile view
           "@media (max-width: 768px)": {
-            height: "45vh", // Adjusted height for mobile view
+            backgroundImage: `url(${"https://safestfire.in/images/fir3.jpg"})`, // Change to mobile image URL
+            backgroundSize: "cover", // Adjusted background size for mobile view
+            height: "25vh", // Adjusted height for mobile view
           },
         }}
       >
@@ -30,10 +32,18 @@ export default function Home() {
           </p>
         </div>
         <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-      </header>
+      </header> */}
+
+      {/* Header new  */}
+      <header className="relative overflow-hidden ">
+      <div className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0" style={{ backgroundImage: 'url("https://i.makeagif.com/media/5-27-2015/_AI68u.gif")' }}></div>
+      <div className="container mx-auto text-center relative z-10 py-24">
+        <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4">Welcome to Zenpa Marketing</h1>
+        <p className="text-lg md:text-xl text-white mb-8">One step solution of fire ,Safety and security equipment and services</p>
+      </div>
+    </header>
 
       {/* Our Services-1 */}
-
       {/* <section className="bg-white shadow-md rounded-lg p-8 font-medium">
         <div className="w-full flex flex-col items-center mb-8">
           <h2 className="text-3xl lg:text-4xl text-center text-gray-800 mb-4 font-bold">
@@ -91,9 +101,7 @@ export default function Home() {
           </div>
         </div>
       </section> */}
-
       {/* Our Services-2 */}
-
       <section className="bg-white shadow-md rounded-lg p-8 font-medium">
         <div className="w-full flex flex-col items-center mb-8">
           <h2 className="text-3xl lg:text-4xl text-center text-gray-800 mb-4 font-bold">
@@ -151,61 +159,31 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Why to Choose Us */}
-
       <section className="bg-white shadow-lg rounded-lg p-8 font-medium">
-        <h2 className="text-4xl lg:text-5xl text-center text-gray-800 mb-8 font-bold">
-          Why Choose Us?
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
-          <div className="bg-gray-100 shadow-lg rounded-lg p-6 w-full transform transition duration-500 hover:scale-105">
-            <h3 className="text-xl lg:text-2xl text-gray-800 mb-4 font-semibold border-b-2 border-orange-500 pb-2">
-              Specialists in Industrial Fire Safety Equipment
-            </h3>
-            <p className="text-gray-700">
-              Zenpa Marketing specializes in providing top-of-the-line
-              industrial fire safety equipment. Our products are meticulously
-              selected to ensure the highest standards of safety in the
-              workplace, offering peace of mind to both employers and employees.
-            </p>
-          </div>
-          <div className="bg-gray-100 shadow-lg rounded-lg p-6 w-full transform transition duration-500 hover:scale-105">
-            <h3 className="text-xl lg:text-2xl text-gray-800 mb-4 font-semibold border-b-2 border-orange-500 pb-2">
-              Expert Project Management for Fire Safety
-            </h3>
-            <p className="text-gray-700">
-              With Zenpa Marketing, you don't just get equipment – you get
-              comprehensive project management services. Our experienced team
-              oversees every aspect of fire safety implementations, ensuring
-              seamless execution from start to finish.
-            </p>
-          </div>
-          <div className="bg-gray-100 shadow-lg rounded-lg p-6 w-full transform transition duration-500 hover:scale-105">
-            <h3 className="text-xl lg:text-2xl text-gray-800 mb-4 font-semibold border-b-2 border-orange-500 pb-2">
-              Efficient Fire NOC & Documentation Services
-            </h3>
-            <p className="text-gray-700">
-              Navigating fire compliance regulations can be daunting, but with
-              Zenpa Marketing, it's a breeze. Our streamlined documentation
-              process simplifies obtaining Fire NOCs and ensures that your
-              workplace meets all necessary regulatory requirements.
-            </p>
-          </div>
-          <div className="bg-gray-100 shadow-lg rounded-lg p-6 w-full transform transition duration-500 hover:scale-105">
-            <h3 className="text-xl lg:text-2xl text-gray-800 mb-4 font-semibold border-b-2 border-orange-500 pb-2">
-              Clear and Compliant Safety Signboards
-            </h3>
-            <p className="text-gray-700">
-              Safety shouldn't be ambiguous. Zenpa Marketing offers clear and
-              compliant safety signboards tailored to your workplace's needs.
-              From emergency exit signs to hazard warnings, we ensure that your
-              premises are equipped with the right signage for optimal safety.
-            </p>
-          </div>
+      <h2 className="text-4xl lg:text-5xl text-center text-gray-800 mb-8 font-bold relative">
+        Why Choose Us?
+       
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="flex items-center">
+          <span className="text-green-500 text-2xl">&#10004;</span>
+          <h3 className="text-xl lg:text-2xl text-gray-800 mb-0 ml-2 font-semibold">Specialists in Industrial Fire Safety Equipment</h3>
         </div>
-      </section>
-
+        <div className="flex items-center">
+          <span className="text-green-500 text-2xl">&#10004;</span>
+          <h3 className="text-xl lg:text-2xl text-gray-800 mb-0 ml-2 font-semibold">Expert Project Management for Fire Safety</h3>
+        </div>
+        <div className="flex items-center">
+          <span className="text-green-500 text-2xl">&#10004;</span>
+          <h3 className="text-xl lg:text-2xl text-gray-800 mb-0 ml-2 font-semibold">Efficient Fire NOC & Documentation Services</h3>
+        </div>
+        <div className="flex items-center">
+          <span className="text-green-500 text-2xl">&#10004;</span>
+          <h3 className="text-xl lg:text-2xl text-gray-800 mb-0 ml-2 font-semibold">Clear and Compliant Safety Signboards</h3>
+        </div>
+      </div>
+    </section>
       {/* At Zenpa Marketing */}
       <section className="bg-gradient-to-b from-purple-900 to-indigo-900 bg-cover w-full ctasection z-50 py-12">
         <div className="relative w-11/12 max-w-[1080px] mx-auto flex flex-col lg:flex-row items-center justify-center lg:justify-between space-y-8 lg:space-y-0 lg:space-x-12 xl:space-x-24">

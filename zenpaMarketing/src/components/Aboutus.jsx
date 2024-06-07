@@ -123,10 +123,9 @@ function AboutUs() {
             />
             {/* CEO Information */}
             <div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-2">Kiran Patel (CEO)</h2>
-              <p className="text-gray-700 mb-2 font-bold">Chemical Engineer || EHS Lead</p>
-              <p className="text-gray-700 mb-4">Kiran Patel is a Chemical Engineer. After completing their engineering, they worked in the chemical industry. However, they transitioned to providing safety services, leveraging their expertise in chemical engineering.</p>
-              <p className="text-gray-700">Now, Kiran Patel is dedicated to ensuring workplace safety and security by providing top-quality safety services to businesses.</p>
+              <h2 className="text-2xl font-bold text-gray-800 mb-2">Kiran Patel (Founder)</h2>
+              <p className="text-gray-700 mb-2 font-bold">PDIS || PDIETM || Safety, Environment & Health Management || Ahmedabad</p>
+              
             </div>
           </div>
         </div>
