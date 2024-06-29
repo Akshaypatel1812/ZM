@@ -30,14 +30,20 @@ const ContactUs = () => {
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="container mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Get in Touch</h1>
-          <p className="text-lg md:text-xl text-white">Your one-stop solution for fire safety equipment and services</p>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+            Get in Touch
+          </h1>
+          <p className="text-lg md:text-xl text-white">
+            Your one-stop solution for fire safety equipment and services
+          </p>
         </div>
       </header>
       <div className="container mx-auto px-4 py-8 flex flex-col items-center justify-center z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
-            <h2 className="text-2xl font-semibold mb-4 text-gray-800">Call Us</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-gray-800">
+              Call Us
+            </h2>
             <p className="text-lg mb-4 text-gray-700">{phoneNumber}</p>
             <button
               onClick={handleCall}
@@ -47,7 +53,9 @@ const ContactUs = () => {
             </button>
           </div>
           <div className="bg-white rounded-lg shadow-md p-6">
-            <h2 className="text-2xl font-semibold mb-4 text-gray-800">Email Us</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-gray-800">
+              Email Us
+            </h2>
             <p className="text-lg mb-4 text-gray-700">{emailAddress}</p>
             <button
               onClick={handleEmail}
@@ -58,7 +66,9 @@ const ContactUs = () => {
           </div>
         </div>
         <div className="mt-8">
-          <h2 className="text-2xl font-semibold mb-4 text-gray-800">Connect with Us</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800">
+            Connect with Us
+          </h2>
           <p className="text-lg mb-4 text-gray-700">Find us on LinkedIn:</p>
           <button
             onClick={handleLinkedIn}
