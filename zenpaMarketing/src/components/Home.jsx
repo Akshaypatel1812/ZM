@@ -404,7 +404,7 @@ export default function Home() {
         </div>
 
         {/* Company Timeline */}
-        <div className="max-w-5xl mx-auto mt-16">
+        <div className="max-w-5xl mx-auto mt-16 ml-2">
           <h3 className="text-3xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500 animate-fadeIn">
             Our Journey
           </h3>
