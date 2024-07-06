@@ -1,10 +1,16 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
+import { motion } from "framer-motion";
 
 const phoneNumber = "+91-9054823690";
 const emailAddress = "zenpamarketing@gmail.com";
 const linkedInProfile = "https://www.linkedin.com/company/zenpa-marketing/";
+
+const handleChatButtonClick = () => {
+  // Replace '1234567890' with your WhatsApp Business number
+  window.open("https://api.whatsapp.com/message/3GKSCIEZWBBKH1?autoload=1&app_absent=0", "_blank");
+};
 
 const handleCall = () => {
   window.location.href = `tel:${phoneNumber}`;
@@ -119,59 +125,55 @@ const handleBuyNow = (product) => {
 
 export default function Home() {
   return (
-    <div className="bg-white">
-      
-
-      {/* <header
-        className="bg-white shadow w-full relative"
-        style={{
-          backgroundImage: `url(${"https://img.freepik.com/free-photo/front-view-protective-glasses-with-hard-hat-headphones_23-2148773471.jpg?size=626&ext=jpg&ga=GA1.1.34264412.1713744000&semt=ais"})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "100% 100%", // Initial background size
-          backgroundAttachment: "fixed",
-          height: "75vh", // Initial height for desktop view
-          // Media query for mobile view
-          "@media (max-width: 768px)": {
-            backgroundImage: `url(${"https://safestfire.in/images/fir3.jpg"})`, // Change to mobile image URL
-            backgroundSize: "cover", // Adjusted background size for mobile view
-            height: "25vh", // Adjusted height for mobile view
-          },
-        }}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="bg-pink-50"
+    >
+      <button
+        className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+        onClick={handleChatButtonClick}
       >
-        <div
-          className="container items-center mx-auto justify-center z-20"
-          style={{ display: "flex", flexDirection: "column", height: "75vh" }}
-        >
-          <h1 className="text-center text-6xl font-bold text-white z-20 ">
-            Welcome to Zenpa Marketing
-          </h1>
-          <p className="text-center text-2xl text-white mt-2 z-20">
-            Your one-stop solution for fire safety equipment and services
-          </p>
-        </div>
-        <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-      </header> */}
+        Chat with Us on WhatsApp
+      </button>
 
       {/* Header new  */}
-      <header className="relative overflow-hidden ">
-        <div
-          className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0"
-          style={{
-            backgroundImage:
-              'url("https://i.makeagif.com/media/5-27-2015/_AI68u.gif")',
-          }}
-        ></div>
+      <header className="relative overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        >
+          <source src="/10332224-hd_2560_1440_25fps.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/* Overlay to darken the video slightly */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-0"></div>
+
         <div className="container mx-auto text-center relative z-10 py-24">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4">
+          {/* Animate heading with framer-motion */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="text-4xl md:text-6xl font-extrabold text-white mb-4 shadow-lg"
+          >
             Welcome to Zenpa Marketing
-          </h1>
-          <p className="text-lg md:text-xl text-white mb-8">
-            One step solution of fire ,Safety and security equipment and
+          </motion.h1>
+          {/* Animate subtitle with framer-motion */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-lg md:text-xl text-white mb-8 shadow-lg"
+          >
+            One step solution of fire, Safety and security equipment and
             services
-          </p>
+          </motion.p>
         </div>
       </header>
-
       {/* Our Services-2 */}
       <section className="bg-white shadow-md rounded-lg p-8 font-medium">
         <div className="w-full flex flex-col items-center mb-8">
@@ -311,7 +313,7 @@ export default function Home() {
       {/* eiefhewidfhndf */}
       <div
         id="aboutUs"
-        className="container mx-auto py-12 bg-gradient-to-b bg-white"
+        className="container mx-auto py-12 bg-gradient-to-b bg-pink-50"
       >
         {/* Company Introduction */}
         <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-10 animate-fadeIn">
@@ -432,110 +434,85 @@ export default function Home() {
         </div>
 
         {/* Testimonials */}
-        <div className="max-w-5xl mx-auto mt-16">
-          <h3 className="text-3xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500 animate-fadeIn">
-            What Our Clients Say
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-2xl transition-shadow duration-300 animate-fadeIn delay-500">
-              <p className="text-gray-700">
-                "Zenpa Marketing provided excellent training and high-quality
-                fire extinguishers. Their commitment to safety is unparalleled."
-              </p>
-              <h4 className="text-xl font-bold text-gray-800 mt-4">
-                - John Doe, CEO of XYZ Corp
-              </h4>
-            </div>
-            <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-2xl transition-shadow duration-300 animate-fadeIn delay-700">
-              <p className="text-gray-700">
-                "The best fire safety equipment and services we've ever used.
-                Highly recommend Zenpa Marketing!"
-              </p>
-              <h4 className="text-xl font-bold text-gray-800 mt-4">
-                - Jane Smith, Safety Manager at ABC Ltd
-              </h4>
-            </div>
-            {/* Add more testimonials as needed */}
-          </div>
-        </div>
       </div>
 
       {/* Contact Us Section */}
-      <div id="contactUs" className="bg-gradient-to-b from-purple-50 to-pink-50">
-      <div className="container mx-auto py-12">
-        {/* Contact Form */}
-        <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-8 animate-fadeIn">
-          <h2 className="text-4xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
-            Contact Us
-          </h2>
-          <form onSubmit={handleSubmit}>
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-lg font-medium text-gray-800"
+      <div
+        id="contactUs"
+        className="bg-gradient-to-b from-purple-50 to-pink-50"
+      >
+        <div className="container mx-auto py-12">
+          {/* Contact Form */}
+          <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-8 animate-fadeIn">
+            <h2 className="text-4xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
+              Contact Us
+            </h2>
+            <form onSubmit={handleSubmit}>
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-lg font-medium text-gray-800"
+                >
+                  Name
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="Contact"
+                  className="block text-lg font-medium text-gray-800"
+                >
+                  Contact no:
+                </label>
+                <input
+                  id="Contact"
+                  type="tel"
+                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                  placeholder="+91 xxxxxxxxxx"
+                  pattern="\d{5}\d{5}"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-lg font-medium text-gray-800"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 h-32 resize-none"
+                  placeholder="Enter your message"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="bg-gradient-to-r mt-3 from-purple-500 to-pink-500 text-white py-2 px-6 rounded-md hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 transition duration-300"
               >
-                Name
-              </label>
-              <input
-                id="name"
-                type="text"
-                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
-                placeholder="Enter your name"
-                required
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="Contact"
-                className="block text-lg font-medium text-gray-800"
-              >
-                Contact no:
-              </label>
-              <input
-                id="Contact"
-                type="tel"
-                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
-                placeholder="+91 xxxxxxxxxx"
-                pattern="\d{5}\d{5}"
-                required
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-lg font-medium text-gray-800"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 h-32 resize-none"
-                placeholder="Enter your message"
-                required
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="bg-gradient-to-r mt-3 from-purple-500 to-pink-500 text-white py-2 px-6 rounded-md hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 transition duration-300"
-            >
-              Send Message via Email
-            </button>
-          </form>
+                Send Message via Email
+              </button>
+            </form>
+          </div>
+        </div>
+
+        {/* Call Button */}
+        <div className="fixed bottom-4 right-4 z-50">
+          <button
+            onClick={handleCall}
+            className="bg-green-500 hover:bg-green-600 text-white font-bold p-4 rounded-full flex items-center justify-center "
+          >
+            <p className="wrap-content">Call Us Now</p>
+          </button>
         </div>
       </div>
-
-      {/* Call Button */}
-      <div className="fixed bottom-4 right-4 z-50">
-        <button
-          onClick={handleCall}
-          className="bg-green-500 hover:bg-green-600 text-white font-bold p-4 rounded-full flex items-center justify-center "
-        >
-          <p className="wrap-content">Call Us Now
-            
-          </p>
-        </button>
-      </div>
-    </div>
 
       {/* Visit Us  */}
 
@@ -607,6 +584,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
