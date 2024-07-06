@@ -7,10 +7,19 @@ const phoneNumber = "+91-9054823690";
 const emailAddress = "zenpamarketing@gmail.com";
 const linkedInProfile = "https://www.linkedin.com/company/zenpa-marketing/";
 
-const handleChatButtonClick = () => {
-  // Replace '1234567890' with your WhatsApp Business number
-  window.open("https://api.whatsapp.com/message/3GKSCIEZWBBKH1?autoload=1&app_absent=0", "_blank");
-};
+
+  const handleChatButtonClick = () => {
+    // Replace '1234567890' with your WhatsApp Business number including country code
+    const phoneNumber = '9054823690'; // Replace with your actual WhatsApp Business number
+    const message = 'Hello! I have a question about your services.';
+
+    // Construct the WhatsApp Business API link
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    // Open the link in a new tab/window
+    window.open(url, '_blank');
+  };
+
 
 const handleCall = () => {
   window.location.href = `tel:${phoneNumber}`;
