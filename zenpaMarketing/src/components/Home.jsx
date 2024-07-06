@@ -2,24 +2,26 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faComments } from '@fortawesome/free-solid-svg-icons';
+
 
 const phoneNumber = "+91-9054823690";
 const emailAddress = "zenpamarketing@gmail.com";
 const linkedInProfile = "https://www.linkedin.com/company/zenpa-marketing/";
 
+const handleChatButtonClick = () => {
+  const phoneNumber = "9054823690";
+  const message =
+    "Hello Zenpa Marketing Recently i visit your web site ! I have to know more about your services.";
 
-  const handleChatButtonClick = () => {
-    // Replace '1234567890' with your WhatsApp Business number including country code
-    const phoneNumber = '9054823690'; // Replace with your actual WhatsApp Business number
-    const message = 'Hello! I have a question about your services.';
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+    message
+  )}`;
 
-    // Construct the WhatsApp Business API link
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-    // Open the link in a new tab/window
-    window.open(url, '_blank');
-  };
-
+  // Open the link in a new tab/window
+  window.open(url, "_blank");
+};
 
 const handleCall = () => {
   window.location.href = `tel:${phoneNumber}`;
@@ -140,12 +142,25 @@ export default function Home() {
       transition={{ duration: 0.6 }}
       className="bg-pink-50"
     >
-      <button
-        className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
-        onClick={handleChatButtonClick}
-      >
-        Chat with Us on WhatsApp
-      </button>
+      {/* WhatsApp Chat Button */}
+      <div className="fixed bottom-20 right-4 z-50">
+        <button
+          className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-3 rounded-full flex items-center justify-center"
+          onClick={handleChatButtonClick}
+        >
+          <FontAwesomeIcon icon={faComments} size="lg" />
+        </button>
+      </div>
+
+      {/* Call Button */}
+      <div className="fixed bottom-4 right-4 z-50">
+        <button
+          className="bg-green-500 hover:bg-green-600 text-white font-bold px-3 py-3 rounded-full flex items-center justify-center"
+          onClick={handleCall}
+        >
+          <FontAwesomeIcon icon={faPhone} size="lg" />
+        </button>
+      </div>
 
       {/* Header new  */}
       <header className="relative overflow-hidden">
@@ -510,16 +525,6 @@ export default function Home() {
               </button>
             </form>
           </div>
-        </div>
-
-        {/* Call Button */}
-        <div className="fixed bottom-4 right-4 z-50">
-          <button
-            onClick={handleCall}
-            className="bg-green-500 hover:bg-green-600 text-white font-bold p-4 rounded-full flex items-center justify-center "
-          >
-            <p className="wrap-content">Call Us Now</p>
-          </button>
         </div>
       </div>
 
