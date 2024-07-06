@@ -163,39 +163,22 @@ export default function Home() {
       </div>
 
       {/* Header new  */}
-      <header className="relative overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          className="absolute top-0 left-0 w-full h-full object-cover z-0"
-        >
-          <source src="/10332224-hd_2560_1440_25fps.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        {/* Overlay to darken the video slightly */}
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-0"></div>
-
+      <header className="relative overflow-hidden ">
+        <div
+          className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0"
+          style={{
+            backgroundImage:
+              'url("https://i.makeagif.com/media/3-03-2017/TZKHB9.gif")',
+          }}
+        ></div>
         <div className="container mx-auto text-center relative z-10 py-24">
-          {/* Animate heading with framer-motion */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="text-4xl md:text-6xl font-extrabold text-white mb-4 shadow-lg"
-          >
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4">
             Welcome to Zenpa Marketing
-          </motion.h1>
-          {/* Animate subtitle with framer-motion */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg md:text-xl text-white mb-8 shadow-lg"
-          >
-            One step solution of fire, Safety and security equipment and
+          </h1>
+          <p className="text-lg md:text-xl text-white mb-8">
+            One step solution of fire ,Safety and security equipment and
             services
-          </motion.p>
+          </p>
         </div>
       </header>
       {/* Our Services-2 */}
