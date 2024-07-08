@@ -2,9 +2,8 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { motion } from "framer-motion";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faComments } from '@fortawesome/free-solid-svg-icons';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone, faComments } from "@fortawesome/free-solid-svg-icons";
 
 const phoneNumber = "+91-9054823690";
 const emailAddress = "zenpamarketing@gmail.com";
@@ -136,12 +135,7 @@ const handleBuyNow = (product) => {
 
 export default function Home() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="bg-pink-50"
-    >
+    <>
       {/* WhatsApp Chat Button */}
       <div className="fixed bottom-20 right-4 z-50">
         <button
@@ -161,426 +155,489 @@ export default function Home() {
           <FontAwesomeIcon icon={faPhone} size="lg" />
         </button>
       </div>
-
-      {/* Header new  */}
-      <header className="relative overflow-hidden ">
-        <div
-          className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0"
-          style={{
-            backgroundImage:
-              'url("https://i.makeagif.com/media/3-03-2017/TZKHB9.gif")',
-          }}
-        ></div>
-        <div className="container mx-auto text-center relative z-10 py-24">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4">
-            Welcome to Zenpa Marketing
-          </h1>
-          <p className="text-lg md:text-xl text-white mb-8">
-            One step solution of fire ,Safety and security equipment and
-            services
-          </p>
-        </div>
-      </header>
-      {/* Our Services-2 */}
-      <section className="bg-white shadow-md rounded-lg p-8 font-medium">
-        <div className="w-full flex flex-col items-center mb-8">
-          <h2 className="text-3xl lg:text-4xl text-center text-gray-800 mb-4 font-bold">
-            Our Services
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gradient-to-br from-purple-400 to-pink-600 shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105">
-            <h3 className="text-xl lg:text-2xl text-white mb-4 font-semibold border-b-2 border-white pb-2">
-              Industrial Fire Safety Equipment
-            </h3>
-            <p className="text-gray-200">
-              High-quality equipment to ensure workplace safety
-            </p>
-          </div>
-          <div className="bg-gradient-to-br from-yellow-400 to-orange-500 shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105">
-            <h3 className="text-xl lg:text-2xl text-white mb-4 font-semibold border-b-2 border-white pb-2">
-              Fire Fighting Project Work
-            </h3>
-            <p className="text-gray-200">
-              Expert project management for fire safety implementations
-            </p>
-          </div>
-          <div className="bg-gradient-to-br from-blue-400 to-cyan-500 shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105">
-            <h3 className="text-xl lg:text-2xl text-white mb-4 font-semibold border-b-2 border-white pb-2">
-              Safety Signboard Work
-            </h3>
-            <p className="text-gray-200">
-              Clear and compliant safety signboards for workplaces
-            </p>
-          </div>
-          <div className="bg-gradient-to-br from-green-400 to-teal-500 shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105">
-            <h3 className="text-xl lg:text-2xl text-white mb-4 font-semibold border-b-2 border-white pb-2">
-              All Types of PPE's
-            </h3>
-            <p className="text-gray-200">
-              Personal Protective Equipment for various industries
-            </p>
-          </div>
-          <div className="bg-gradient-to-br from-pink-400 to-red-500 shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105">
-            <h3 className="text-xl lg:text-2xl text-white mb-4 font-semibold border-b-2 border-white pb-2">
-              Fire Safety Training Work
-            </h3>
-            <p className="text-gray-200">
-              Comprehensive training programs for fire safety awareness
-            </p>
-          </div>
-          <div className="bg-gradient-to-br from-indigo-400 to-purple-500 shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105">
-            <h3 className="text-xl lg:text-2xl text-white mb-4 font-semibold border-b-2 border-white pb-2">
-              CCTV Camera Installation, AMC, & Service
-            </h3>
-            <p className="text-gray-200">
-              Installation, maintenance, and servicing of CCTV systems
-            </p>
-          </div>
-        </div>
-      </section>
-      {/* Why to Choose Us */}
-      <section
-        id="temp"
-        className="bg-white shadow-lg rounded-lg p-8 font-medium"
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="bg-pink-50"
       >
-        <h2 className="text-4xl lg:text-5xl text-center text-gray-800 mb-8 font-bold relative">
-          Why Choose Us?
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
-          <div className="flex items-center">
-            <span className="text-green-500 text-2xl">&#10004;</span>
-            <h3 className="text-xl lg:text-2xl text-gray-800 mb-0 ml-2 font-semibold">
-              Specialists in Industrial Fire Safety Equipment
-            </h3>
-          </div>
-          <div className="flex items-center">
-            <span className="text-green-500 text-2xl">&#10004;</span>
-            <h3 className="text-xl lg:text-2xl text-gray-800 mb-0 ml-2 font-semibold">
-              Expert Project Management for Fire Safety
-            </h3>
-          </div>
-          <div className="flex items-center">
-            <span className="text-green-500 text-2xl">&#10004;</span>
-            <h3 className="text-xl lg:text-2xl text-gray-800 mb-0 ml-2 font-semibold">
-              Efficient Fire NOC & Documentation Services
-            </h3>
-          </div>
-          <div className="flex items-center">
-            <span className="text-green-500 text-2xl">&#10004;</span>
-            <h3 className="text-xl lg:text-2xl text-gray-800 mb-0 ml-2 font-semibold">
-              Clear and Compliant Safety Signboards
-            </h3>
-          </div>
-        </div>
-      </section>
-      {/* At Zenpa Marketing */}
-      <section className="bg-gradient-to-b from-purple-900 to-indigo-900 bg-cover w-full ctasection z-50 py-12">
-        <div className="relative w-11/12 max-w-[1080px] mx-auto flex flex-col lg:flex-row items-center justify-center lg:justify-between space-y-8 lg:space-y-0 lg:space-x-12 xl:space-x-24">
-          {/* <!--left-part--> */}
-          <div className="lg:w-1/2 space-y-6 lg:mr-8 flex flex-col justify-center text-white mx-8">
-            <h2 className="font-mullish font-extrabold text-4xl md:text-5xl lg:text-6xl tracking-tight">
-              At Zenpa Marketing
-            </h2>
-            <div className="w-12 h-1 bg-lime-400"></div>
-            <p className="font-mullish text-lg md:text-xl lg:text-2xl leading-relaxed md:leading-snug lg:leading-normal xl:text-3xl xl:leading-relaxed border-l-4 border-lime-400 pl-6">
-              We are committed to ensuring the safety and security of your
-              workplace. Choose us for unmatched expertise, top-quality
-              products, and exceptional service that puts your safety first.
+        {/* Header new  */}
+        <header className="relative overflow-hidden" id="home">
+          <div
+            className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0"
+            style={{
+              backgroundImage:
+                'url("https://i.makeagif.com/media/3-03-2017/TZKHB9.gif")',
+            }}
+          ></div>
+          <div className="container mx-auto text-center relative z-10 py-24">
+            <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4">
+              Welcome to Zenpa Marketing
+            </h1>
+            <p className="text-lg md:text-xl text-white mb-8">
+              One step solution of fire ,Safety and security equipment and
+              services
             </p>
           </div>
-          {/* <!--right-part (optional)--> */}
-          <div className="hidden lg:flex lg:flex-col items-center justify-center relative">
-            <div className="rounded-full bg-lime-400 w-32 h-32 opacity-50 animate-bounce mb-4"></div>
-            <svg
-              className="absolute -bottom-20 -right-20 text-lime-400"
-              width="120"
-              height="120"
-              viewBox="0 0 120 120"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="60"
-                cy="60"
-                r="60"
-                fill="currentColor"
-                opacity="0.1"
-              />
-            </svg>
-            <p className="font-mullish text-lg text-center text-lime-400">
-              Your Safety First
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* section 2 aboutUs */}
-
-      {/* eiefhewidfhndf */}
-      <div
-        id="aboutUs"
-        className="container mx-auto py-12 bg-gradient-to-b bg-pink-50"
-      >
-        {/* Company Introduction */}
-        <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-10 animate-fadeIn">
-          <h2
-            id="learn-more"
-            className="text-4xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-red-500"
-          >
-            About Us
-          </h2>
-          <p className="text-gray-700 text-lg leading-relaxed text-center">
-            <strong>Zenpa Marketing</strong> is your trusted partner in
-            workplace safety and security. Established in 2023, we specialize in
-            providing top-notch fire fighting training services and fire
-            extinguishers to ensure the safety and well-being of your
-            organization. Our mission is to offer cutting-edge fire safety
-            equipment and solutions, coupled with exceptional service, to
-            businesses of all sizes. With a vision to lead the fire safety
-            industry, we are committed to excellence and customer satisfaction.
-          </p>
-        </div>
-
-        {/* GST Number */}
-        <div className="max-w-5xl mx-auto mt-16">
-          <h3 className="text-3xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500 animate-fadeIn">
-            GST Number
-          </h3>
-          <p className="text-center text-4xl font-bold text-gray-800 bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-blue-500 animate-fadeIn">
-            24BWJPP6345P1ZS
-          </p>
-        </div>
-
-        {/* Mission, Vision, and Values */}
-        <div className="container mx-auto py-12">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white shadow-lg rounded-lg p-8 hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 hover:scale-105 animate-slideInLeft">
-                <h3 className="text-2xl font-bold text-orange-600 mb-4">
-                  Established in Year 2023
-                </h3>
-                <p className="text-gray-700">
-                  Zenpa Marketing is a service provider and trader of fire
-                  fighting training service and fire extinguishers, committed to
-                  ensuring workplace safety and security.
-                </p>
-              </div>
-              <div className="bg-white shadow-lg rounded-lg p-8 hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 hover:scale-105 animate-slideInUp">
-                <h3 className="text-2xl font-bold text-orange-600 mb-4">
-                  Our Mission
-                </h3>
-                <p className="text-gray-700">
-                  To offer top-quality fire safety equipment and solutions,
-                  along with exceptional service, to businesses of all sizes.
-                </p>
-              </div>
-              <div className="bg-white shadow-lg rounded-lg p-8 hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 hover:scale-105 animate-slideInRight">
-                <h3 className="text-2xl font-bold text-orange-600 mb-4">
-                  Our Vision
-                </h3>
-                <p className="text-gray-700">
-                  To be a leader in the fire safety industry, recognized for our
-                  commitment to excellence and customer satisfaction.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* CEO Section */}
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-white shadow-lg rounded-lg p-10 hover:shadow-2xl transition-shadow duration-300 animate-fadeIn">
-            <div className="flex flex-col lg:flex-row items-center">
-              {/* CEO Photo */}
-              <img
-                src="https://www.philips.com/c-dam/corporate/en_AA/about/about-us/executive-commitee/roy-jakobs-ceo-cardview.jpg"
-                alt="CEO"
-                className="rounded-full w-32 h-32 lg:w-48 lg:h-48 mb-4 lg:mb-0 lg:mr-8"
-              />
-              {/* CEO Information */}
-              <div>
-                <h2 className="text-2xl font-bold text-gray-800 mb-2">
-                  Kiran Patel (Founder)
-                </h2>
-                <p className="text-gray-700 mb-2 font-bold">
-                  PDIS || PDIETM || Safety, Environment & Health Management ||
-                  Ahmedabad
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Company Timeline */}
-        <div className="max-w-5xl mx-auto mt-16 ml-2">
-          <h3 className="text-3xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500 animate-fadeIn">
-            Our Journey
-          </h3>
-          <div className="flex flex-col gap-6">
-            <div className="relative pl-10 before:content-[''] before:absolute before:left-0 before:top-0 before:w-1 before:h-full before:bg-gradient-to-b from-purple-500 to-pink-500 after:content-[''] after:absolute after:left-[-0.5rem] after:top-0 after:w-3 after:h-3 after:bg-white after:border-4 after:border-purple-500 after:rounded-full animate-fadeIn">
-              <div className="bg-white shadow-lg rounded-lg p-6">
-                <h4 className="text-xl font-bold text-gray-800 mb-2">2023</h4>
-                <p className="text-gray-700">
-                  Zenpa Marketing was established with a vision to enhance
-                  workplace safety and security.
-                </p>
-              </div>
-            </div>
-            <div className="relative pl-10 before:content-[''] before:absolute before:left-0 before:top-0 before:w-1 before:h-full before:bg-gradient-to-b from-purple-500 to-pink-500 after:content-[''] after:absolute after:left-[-0.5rem] after:top-0 after:w-3 after:h-3 after:bg-white after:border-4 after:border-purple-500 after:rounded-full animate-fadeIn delay-300">
-              <div className="bg-white shadow-lg rounded-lg p-6">
-                <h4 className="text-xl font-bold text-gray-800 mb-2">2024</h4>
-                <p className="text-gray-700">
-                  Expanded our services to include advanced fire fighting
-                  training and state-of-the-art fire extinguishers.
-                </p>
-              </div>
-            </div>
-            {/* Add more timeline items as needed */}
-          </div>
-        </div>
-
-        {/* Testimonials */}
-      </div>
-
-      {/* Contact Us Section */}
-      <div
-        id="contactUs"
-        className="bg-gradient-to-b from-purple-50 to-pink-50"
-      >
-        <div className="container mx-auto py-12">
-          {/* Contact Form */}
-          <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-8 animate-fadeIn">
-            <h2 className="text-4xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
-              Contact Us
-            </h2>
-            <form onSubmit={handleSubmit}>
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-lg font-medium text-gray-800"
-                >
-                  Name
-                </label>
-                <input
-                  id="name"
-                  type="text"
-                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
-                  placeholder="Enter your name"
-                  required
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="Contact"
-                  className="block text-lg font-medium text-gray-800"
-                >
-                  Contact no:
-                </label>
-                <input
-                  id="Contact"
-                  type="tel"
-                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
-                  placeholder="+91 xxxxxxxxxx"
-                  pattern="\d{5}\d{5}"
-                  required
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-lg font-medium text-gray-800"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 h-32 resize-none"
-                  placeholder="Enter your message"
-                  required
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="bg-gradient-to-r mt-3 from-purple-500 to-pink-500 text-white py-2 px-6 rounded-md hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 transition duration-300"
-              >
-                Send Message via Email
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      {/* Visit Us  */}
-
-      <div
-        id="location"
-        className="max-w-screen mx-auto text-center p-8 bg-white rounded-lg shadow-xl"
-      >
-        <h1 className="text-4xl mb-6 font-semibold text-from-purple-500 from-purple-500 to-pink-500">
-          Discover Us Here
-        </h1>
-
-        {/* <div className="border-b-2 border-gray-300 mb-6"></div> */}
-
-        <p className="text-lg mb-8 text-gray-700">
-          <span className="font-semibold">Address:</span> F/12 Tirth Arcade,
-          Thol Road, Kadi, Dist. Mehsana, Gujarat, Pin Code: 382715
-        </p>
-
-        <div className="w-full overflow-hidden rounded-lg border-4 border-blue-200 relative">
-          <iframe
-            title="location-map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.7733070046584!2d72.3345043738156!3d23.2876854063857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c2298b5261e11%3A0xcd5944739c215411!2sTirth%20Arcade!5e0!3m2!1sen!2sin!4v1714312138646!5m2!1sen!2sin"
-            width="600"
-            height="450"
-            className="w-full rounded-lg"
-            allowFullScreen=""
-            loading="lazy"
-          ></iframe>
-          <div className="absolute inset-0 flex items-center justify-center">
-            {/* Any additional elements can be added here */}
-          </div>
-        </div>
-
-        <div className="border-t-2 border-gray-300 mt-6"></div>
-      </div>
-
-      {/* Product section */}
-      <div id="products" className="bg-gray-100 py-16">
-        <header className="text-center mb-12">
-          <h1 className="text-3xl md:text-4xl font-semibold text-gray-800">
-            Welcome to Our Safety Products Store
-          </h1>
-          <p className="text-lg text-gray-700 mt-2">
-            Browse our collection of top-quality safety equipment
-          </p>
         </header>
-        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product) => (
-            <div
-              key={product.id}
-              className="bg-white shadow-lg rounded-lg overflow-hidden transition duration-300 transform hover:scale-105"
+        {/* Our Services-2 */}
+        <section className="bg-white shadow-md rounded-lg p-8 font-medium">
+          <div className="w-full flex flex-col items-center mb-8">
+            <h2 className="text-3xl lg:text-4xl text-center text-gray-800 mb-4 font-bold">
+              Our Services
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-purple-400 to-pink-600 shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105">
+              <h3 className="text-xl lg:text-2xl text-white mb-4 font-semibold border-b-2 border-white pb-2">
+                Industrial Fire Safety Equipment
+              </h3>
+              <p className="text-gray-200">
+                High-quality equipment to ensure workplace safety
+              </p>
+            </div>
+            <div className="bg-gradient-to-br from-yellow-400 to-orange-500 shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105">
+              <h3 className="text-xl lg:text-2xl text-white mb-4 font-semibold border-b-2 border-white pb-2">
+                Fire Fighting Project Work
+              </h3>
+              <p className="text-gray-200">
+                Expert project management for fire safety implementations
+              </p>
+            </div>
+            <div className="bg-gradient-to-br from-blue-400 to-cyan-500 shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105">
+              <h3 className="text-xl lg:text-2xl text-white mb-4 font-semibold border-b-2 border-white pb-2">
+                Safety Signboard Work
+              </h3>
+              <p className="text-gray-200">
+                Clear and compliant safety signboards for workplaces
+              </p>
+            </div>
+            <div className="bg-gradient-to-br from-green-400 to-teal-500 shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105">
+              <h3 className="text-xl lg:text-2xl text-white mb-4 font-semibold border-b-2 border-white pb-2">
+                All Types of PPE's
+              </h3>
+              <p className="text-gray-200">
+                Personal Protective Equipment for various industries
+              </p>
+            </div>
+            <div className="bg-gradient-to-br from-pink-400 to-red-500 shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105">
+              <h3 className="text-xl lg:text-2xl text-white mb-4 font-semibold border-b-2 border-white pb-2">
+                Fire Safety Training Work
+              </h3>
+              <p className="text-gray-200">
+                Comprehensive training programs for fire safety awareness
+              </p>
+            </div>
+            <div className="bg-gradient-to-br from-indigo-400 to-purple-500 shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105">
+              <h3 className="text-xl lg:text-2xl text-white mb-4 font-semibold border-b-2 border-white pb-2">
+                CCTV Camera Installation, AMC, & Service
+              </h3>
+              <p className="text-gray-200">
+                Installation, maintenance, and servicing of CCTV systems
+              </p>
+            </div>
+          </div>
+        </section>
+        {/* Why to Choose Us */}
+        <section
+          id="temp"
+          className="bg-white shadow-lg rounded-lg p-8 font-medium"
+        >
+          <h2 className="text-4xl lg:text-5xl text-center text-gray-800 mb-8 font-bold relative">
+            Why Choose Us?
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div className="flex items-center">
+              <span className="text-green-500 text-2xl">&#10004;</span>
+              <h3 className="text-xl lg:text-2xl text-gray-800 mb-0 ml-2 font-semibold">
+                Specialists in Industrial Fire Safety Equipment
+              </h3>
+            </div>
+            <div className="flex items-center">
+              <span className="text-green-500 text-2xl">&#10004;</span>
+              <h3 className="text-xl lg:text-2xl text-gray-800 mb-0 ml-2 font-semibold">
+                Expert Project Management for Fire Safety
+              </h3>
+            </div>
+            <div className="flex items-center">
+              <span className="text-green-500 text-2xl">&#10004;</span>
+              <h3 className="text-xl lg:text-2xl text-gray-800 mb-0 ml-2 font-semibold">
+                Efficient Fire NOC & Documentation Services
+              </h3>
+            </div>
+            <div className="flex items-center">
+              <span className="text-green-500 text-2xl">&#10004;</span>
+              <h3 className="text-xl lg:text-2xl text-gray-800 mb-0 ml-2 font-semibold">
+                Clear and Compliant Safety Signboards
+              </h3>
+            </div>
+          </div>
+        </section>
+        {/* At Zenpa Marketing */}
+        <section className="bg-gradient-to-b from-purple-900 to-indigo-900 bg-cover w-full ctasection z-50 py-12">
+          <div className="relative w-11/12 max-w-[1080px] mx-auto flex flex-col lg:flex-row items-center justify-center lg:justify-between space-y-8 lg:space-y-0 lg:space-x-12 xl:space-x-24">
+            {/* <!--left-part--> */}
+            <div className="lg:w-1/2 space-y-6 lg:mr-8 flex flex-col justify-center text-white mx-8">
+              <h2 className="font-mullish font-extrabold text-4xl md:text-5xl lg:text-6xl tracking-tight">
+                At Zenpa Marketing
+              </h2>
+              <div className="w-12 h-1 bg-lime-400"></div>
+              <p className="font-mullish text-lg md:text-xl lg:text-2xl leading-relaxed md:leading-snug lg:leading-normal xl:text-3xl xl:leading-relaxed border-l-4 border-lime-400 pl-6">
+                We are committed to ensuring the safety and security of your
+                workplace. Choose us for unmatched expertise, top-quality
+                products, and exceptional service that puts your safety first.
+              </p>
+            </div>
+            {/* <!--right-part (optional)--> */}
+            <div className="hidden lg:flex lg:flex-col items-center justify-center relative">
+              <div className="rounded-full bg-lime-400 w-32 h-32 opacity-50 animate-bounce mb-4"></div>
+              <svg
+                className="absolute -bottom-20 -right-20 text-lime-400"
+                width="120"
+                height="120"
+                viewBox="0 0 120 120"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="60"
+                  cy="60"
+                  r="60"
+                  fill="currentColor"
+                  opacity="0.1"
+                />
+              </svg>
+              <p className="font-mullish text-lg text-center text-lime-400">
+                Your Safety First
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* section 2 aboutUs */}
+
+        {/* eiefhewidfhndf */}
+        <div
+          id="aboutUs"
+          className="container mx-auto py-12 bg-gradient-to-b bg-pink-50"
+        >
+          {/* Company Introduction */}
+          <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-10 animate-fadeIn">
+            <h2
+              id="learn-more"
+              className="text-4xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-red-500"
             >
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-                <p className="text-gray-700 mb-4">{product.description}</p>
-                <button
-                  className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300"
-                  onClick={() => handleBuyNow(product)}
-                >
-                  Order Now
-                </button>
+              About Us
+            </h2>
+            <p className="text-gray-700 text-lg leading-relaxed text-center">
+              <strong>Zenpa Marketing</strong> is your trusted partner in
+              workplace safety and security. Established in 2023, we specialize
+              in providing top-notch fire fighting training services and fire
+              extinguishers to ensure the safety and well-being of your
+              organization. Our mission is to offer cutting-edge fire safety
+              equipment and solutions, coupled with exceptional service, to
+              businesses of all sizes. With a vision to lead the fire safety
+              industry, we are committed to excellence and customer
+              satisfaction.
+            </p>
+          </div>
+
+          {/* GST Number */}
+          <div className="max-w-5xl mx-auto mt-16">
+            <h3 className="text-3xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500 animate-fadeIn">
+              GST Number
+            </h3>
+            <p className="text-center text-4xl font-bold text-gray-800 bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-blue-500 animate-fadeIn">
+              24BWJPP6345P1ZS
+            </p>
+          </div>
+
+          {/* Mission, Vision, and Values */}
+          <div className="container mx-auto py-12">
+            <div className="max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="bg-white shadow-lg rounded-lg p-8 hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 hover:scale-105 animate-slideInLeft">
+                  <h3 className="text-2xl font-bold text-orange-600 mb-4">
+                    Established in Year 2023
+                  </h3>
+                  <p className="text-gray-700">
+                    Zenpa Marketing is a service provider and trader of fire
+                    fighting training service and fire extinguishers, committed
+                    to ensuring workplace safety and security.
+                  </p>
+                </div>
+                <div className="bg-white shadow-lg rounded-lg p-8 hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 hover:scale-105 animate-slideInUp">
+                  <h3 className="text-2xl font-bold text-orange-600 mb-4">
+                    Our Mission
+                  </h3>
+                  <p className="text-gray-700">
+                    To offer top-quality fire safety equipment and solutions,
+                    along with exceptional service, to businesses of all sizes.
+                  </p>
+                </div>
+                <div className="bg-white shadow-lg rounded-lg p-8 hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 hover:scale-105 animate-slideInRight">
+                  <h3 className="text-2xl font-bold text-orange-600 mb-4">
+                    Our Vision
+                  </h3>
+                  <p className="text-gray-700">
+                    To be a leader in the fire safety industry, recognized for
+                    our commitment to excellence and customer satisfaction.
+                  </p>
+                </div>
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* CEO Section */}
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-white shadow-lg rounded-lg p-10 hover:shadow-2xl transition-shadow duration-300 animate-fadeIn">
+              <div className="flex flex-col lg:flex-row items-center">
+                {/* CEO Photo */}
+                <img
+                  src="https://www.philips.com/c-dam/corporate/en_AA/about/about-us/executive-commitee/roy-jakobs-ceo-cardview.jpg"
+                  alt="CEO"
+                  className="rounded-full w-32 h-32 lg:w-48 lg:h-48 mb-4 lg:mb-0 lg:mr-8"
+                />
+                {/* CEO Information */}
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-800 mb-2">
+                    Kiran Patel (Founder)
+                  </h2>
+                  <p className="text-gray-700 mb-2 font-bold">
+                    PDIS || PDIETM || Safety, Environment & Health Management ||
+                    Ahmedabad
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Company Timeline */}
+          <div className="max-w-5xl mx-auto mt-16 ml-2">
+            <h3 className="text-3xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500 animate-fadeIn">
+              Our Journey
+            </h3>
+            <div className="flex flex-col gap-6">
+              <div className="relative pl-10 before:content-[''] before:absolute before:left-0 before:top-0 before:w-1 before:h-full before:bg-gradient-to-b from-purple-500 to-pink-500 after:content-[''] after:absolute after:left-[-0.5rem] after:top-0 after:w-3 after:h-3 after:bg-white after:border-4 after:border-purple-500 after:rounded-full animate-fadeIn">
+                <div className="bg-white shadow-lg rounded-lg p-6">
+                  <h4 className="text-xl font-bold text-gray-800 mb-2">2023</h4>
+                  <p className="text-gray-700">
+                    Zenpa Marketing was established with a vision to enhance
+                    workplace safety and security.
+                  </p>
+                </div>
+              </div>
+              <div className="relative pl-10 before:content-[''] before:absolute before:left-0 before:top-0 before:w-1 before:h-full before:bg-gradient-to-b from-purple-500 to-pink-500 after:content-[''] after:absolute after:left-[-0.5rem] after:top-0 after:w-3 after:h-3 after:bg-white after:border-4 after:border-purple-500 after:rounded-full animate-fadeIn delay-300">
+                <div className="bg-white shadow-lg rounded-lg p-6">
+                  <h4 className="text-xl font-bold text-gray-800 mb-2">2024</h4>
+                  <p className="text-gray-700">
+                    Expanded our services to include advanced fire fighting
+                    training and state-of-the-art fire extinguishers.
+                  </p>
+                </div>
+              </div>
+              {/* Add more timeline items as needed */}
+            </div>
+          </div>
+
+          {/* Testimonials */}
         </div>
-      </div>
-    </motion.div>
+
+        {/* Contact Us Section */}
+        <div
+          id="contactUs"
+          className="bg-gradient-to-b from-purple-50 to-pink-50"
+        >
+          <div className="container mx-auto py-12">
+            {/* Contact Form */}
+            <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-8 animate-fadeIn">
+              <h2 className="text-4xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
+                Contact Us
+              </h2>
+              <form onSubmit={handleSubmit}>
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="block text-lg font-medium text-gray-800"
+                  >
+                    Name
+                  </label>
+                  <input
+                    id="name"
+                    type="text"
+                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="Contact"
+                    className="block text-lg font-medium text-gray-800"
+                  >
+                    Contact no:
+                  </label>
+                  <input
+                    id="Contact"
+                    type="tel"
+                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    placeholder="+91 xxxxxxxxxx"
+                    pattern="\d{5}\d{5}"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-lg font-medium text-gray-800"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 h-32 resize-none"
+                    placeholder="Enter your message"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="bg-gradient-to-r mt-3 from-purple-500 to-pink-500 text-white py-2 px-6 rounded-md hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 transition duration-300"
+                >
+                  Send Message via Email
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        {/* Visit Us  */}
+
+        <div
+          id="location"
+          className="max-w-screen mx-auto text-center p-8 bg-white rounded-lg shadow-xl"
+        >
+          <h1 className="text-4xl mb-6 font-semibold text-from-purple-500 from-purple-500 to-pink-500">
+            Discover Us Here
+          </h1>
+
+          {/* <div className="border-b-2 border-gray-300 mb-6"></div> */}
+
+          <p className="text-lg mb-8 text-gray-700">
+            <span className="font-semibold">Address:</span> F/12 Tirth Arcade,
+            Thol Road, Kadi, Dist. Mehsana, Gujarat, Pin Code: 382715
+          </p>
+
+          <div className="w-full overflow-hidden rounded-lg border-4 border-blue-200 relative">
+            <iframe
+              title="location-map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.7733070046584!2d72.3345043738156!3d23.2876854063857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c2298b5261e11%3A0xcd5944739c215411!2sTirth%20Arcade!5e0!3m2!1sen!2sin!4v1714312138646!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              className="w-full rounded-lg"
+              allowFullScreen=""
+              loading="lazy"
+            ></iframe>
+            <div className="absolute inset-0 flex items-center justify-center">
+              {/* Any additional elements can be added here */}
+            </div>
+          </div>
+
+          <div className="border-t-2 border-gray-300 mt-6"></div>
+        </div>
+
+        {/* Product section */}
+
+        <div id="products" className="bg-gray-100 py-16">
+          <header className="text-center mb-12">
+            <h1 className="text-3xl md:text-4xl font-semibold text-gray-800">
+              Welcome to Our Safety Products Store
+            </h1>
+            <p className="text-lg text-gray-700 mt-2">
+              Browse our collection of top-quality safety equipment
+            </p>
+          </header>
+          <section className="bg-white pt-40 pb-12 -mt-[150px] -z-[100]">
+            <div className="relative w-11/12 max-w-[1080px] mx-auto pt-4 flex flex-row justify-between">
+              {/* left */}
+              <div className="flex flex-col justify-center max-w-[calc(100%-600px)]">
+                <h2 className="font-mullish font-extrabold text-2xl text-deepBlue">
+                  Join the 50,00,000 businesses using Razorpay
+                </h2>
+                <div className="w-8 h-1 bg-lime-500 mb-10 mt-4"></div>
+                <p className="font-mullish opacity-80">
+                  We make it easier for you to focus on building great products
+                  while we work on simplifying your payments. Become one of us
+                  by joining thousands of our happy users and simplify the
+                  online payment experience for your customers. <br />
+                  <br /> Focus on your business while we handle the complexities
+                  of payments for you.
+                </p>
+                <div className="mt-7">
+                  <button className="relative flex items-center justify-start bg-lightBlue text-white py-[14px] px-[18px] rounded-md font-mullish hover:bg-lightBlue500 transition-all duration-200 w-[9rem] h-12">
+                    Get Started
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      className="bi bi-arrow-right ml-2"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              {/* right */}
+              <div className="h-[500px] w-[500px] relative overflow-y-hidden">
+                <div
+                  style={{
+                    background: "linear-gradient(180deg,#f4f8ff,#fff0)",
+                  }}
+                  className="absolute h-[150px] w-full top-0 z-50"
+                ></div>
+                <img
+                  src="https://pbs.twimg.com/media/CqnhyFSWEAIvYZX.jpg" // Replace with your adjusted Dropbox shared link
+                  alt=""
+                  className="absolute object-cover h-full w-full animate-float"
+                />
+                <div
+                  style={{ background: "linear-gradient(0deg,#f4f8ff,#fff0)" }}
+                  className="absolute h-[150px] w-full bottom-0 z-50"
+                ></div>
+              </div>
+            </div>
+          </section>
+          <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {products.map((product) => (
+              <div
+                key={product.id}
+                className="bg-white shadow-lg rounded-lg overflow-hidden transition duration-300 transform hover:scale-105"
+              >
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+                  <p className="text-gray-700 mb-4">{product.description}</p>
+                  <button
+                    className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300"
+                    onClick={() => handleBuyNow(product)}
+                  >
+                    Order Now
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+    </>
   );
 }
