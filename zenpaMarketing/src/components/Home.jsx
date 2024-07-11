@@ -548,8 +548,9 @@ export default function Home() {
 
         {/* Product section */}
 
-        <div id="products" className="bg-gray-100 py-16">
+        <div id="products" className="bg-white py-16">
           <header className="text-center mb-12">
+          
             <h1 className="text-3xl md:text-4xl font-semibold text-gray-800">
               Welcome to Our Safety Products Store
             </h1>
@@ -560,7 +561,7 @@ export default function Home() {
           <section className="bg-white pt-40 pb-12 -mt-[150px] -z-[100]">
             <div className="relative w-11/12 max-w-[1080px] mx-auto pt-4 flex flex-row justify-between">
               {/* left */}
-              <div className="flex flex-col justify-center max-w-[calc(100%-600px)]">
+              <div className="bg-white flex flex-col justify-center max-w-[calc(100%-600px)]">
                 <h2 className="font-mullish font-extrabold text-2xl text-deepBlue">
                   Join the 50,00,000 businesses using Razorpay
                 </h2>
@@ -601,7 +602,7 @@ export default function Home() {
                   className="absolute h-[150px] w-full top-0 z-50"
                 ></div>
                 <img
-                  src="https://pbs.twimg.com/media/CqnhyFSWEAIvYZX.jpg" // Replace with your adjusted Dropbox shared link
+                  src="https://images.squarespace-cdn.com/content/v1/533f39a2e4b0cc3170028bf6/1476983292969-8V7610OD1F6W6BAR90F4/image-asset.png" // Replace with your adjusted Dropbox shared link
                   alt=""
                   className="absolute object-cover h-full w-full animate-float"
                 />
