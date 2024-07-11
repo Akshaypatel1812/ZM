@@ -550,7 +550,6 @@ export default function Home() {
 
         <div id="products" className="bg-white py-16">
           <header className="text-center mb-12">
-          
             <h1 className="text-3xl md:text-4xl font-semibold text-gray-800">
               Welcome to Our Safety Products Store
             </h1>
@@ -559,42 +558,9 @@ export default function Home() {
             </p>
           </header>
           <section className="bg-white pt-40 pb-12 -mt-[150px] -z-[100]">
-            <div className="relative w-11/12 max-w-[1080px] mx-auto pt-4 flex flex-row justify-between">
-              {/* left */}
-              <div className="bg-white flex flex-col justify-center max-w-[calc(100%-600px)]">
-                <h2 className="font-mullish font-extrabold text-2xl text-deepBlue">
-                  Join the 50,00,000 businesses using Razorpay
-                </h2>
-                <div className="w-8 h-1 bg-lime-500 mb-10 mt-4"></div>
-                <p className="font-mullish opacity-80">
-                  We make it easier for you to focus on building great products
-                  while we work on simplifying your payments. Become one of us
-                  by joining thousands of our happy users and simplify the
-                  online payment experience for your customers. <br />
-                  <br /> Focus on your business while we handle the complexities
-                  of payments for you.
-                </p>
-                <div className="mt-7">
-                  <button className="relative flex items-center justify-start bg-lightBlue text-white py-[14px] px-[18px] rounded-md font-mullish hover:bg-lightBlue500 transition-all duration-200 w-[9rem] h-12">
-                    Get Started
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      className="bi bi-arrow-right ml-2"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              {/* right */}
-              <div className="h-[500px] w-[500px] relative overflow-y-hidden">
+            <div className="relative w-11/12 max-w-[1080px] mx-auto pt-2 flex flex-col lg:flex-row justify-between">
+              {/* right (image) */}
+              <div className="h-[300px] lg:h-[500px] w-full lg:w-[50%] relative overflow-hidden lg:order-2">
                 <div
                   style={{
                     background: "linear-gradient(180deg,#f4f8ff,#fff0)",
@@ -602,7 +568,7 @@ export default function Home() {
                   className="absolute h-[150px] w-full top-0 z-50"
                 ></div>
                 <img
-                  src="https://images.squarespace-cdn.com/content/v1/533f39a2e4b0cc3170028bf6/1476983292969-8V7610OD1F6W6BAR90F4/image-asset.png" // Replace with your adjusted Dropbox shared link
+                  src="https://images.squarespace-cdn.com/content/v1/533f39a2e4b0cc3170028bf6/1476983292969-8V7610OD1F6W6BAR90F4/image-asset.png"
                   alt=""
                   className="absolute object-cover h-full w-full animate-float"
                 />
@@ -611,8 +577,45 @@ export default function Home() {
                   className="absolute h-[150px] w-full bottom-0 z-50"
                 ></div>
               </div>
+              {/* left (text) */}
+              <div className="bg-white flex flex-col justify-center mt-10 lg:max-w-[50%] lg:order-1">
+                <div className="lg:pl-8">
+                  <h2 className="font-mullish font-extrabold text-2xl text-deepBlue text-center lg:text-left">
+                    Discover Safety Products from 100+ Leading Companies
+                  </h2>
+                  <div className="w-8 h-1 bg-lime-500 mb-10 mt-4 mx-auto lg:mx-0"></div>
+                  <p className="font-mullish opacity-80 lg:text-left">
+                    We offer a comprehensive range of safety products sourced
+                    from over 100 reputable companies. Each product meets
+                    stringent quality standards, ensuring reliability and safety
+                    for your workplace. Whether you need personal protective
+                    equipment (PPE), fire safety gear, or industrial safety
+                    solutions, our products are designed to keep your employees
+                    safe and your operations compliant.
+                  </p>
+                  <div className="mt-7 flex justify-center lg:justify-start">
+                    <button className="relative flex items-center justify-start bg-lightBlue text-white py-[14px] px-[18px] rounded-md font-mullish hover:bg-lightBlue500 transition-all duration-200 w-[9rem] h-12">
+                      Explore Products
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        className="bi bi-arrow-right ml-2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
+
           <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product) => (
               <div
