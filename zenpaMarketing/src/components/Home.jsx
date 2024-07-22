@@ -389,14 +389,14 @@ export default function Home() {
 
           {/* CEO Section */}
           <div className="relative w-11/12 max-w-[1500px] mx-auto py-10">
-            
             <img
               src="https://static.vecteezy.com/system/resources/thumbnails/015/735/685/small_2x/design-halftone-white-grey-background-futuristic-grunge-pattern-dot-wave-modern-stylish-pop-art-texture-for-posters-sites-business-cards-covers-labels-mockup-vector.jpg"
               alt="dot"
               className="absolute w-[200px] top-[2rem] left-[0rem] z-10"
             />
+
             {/* Main part */}
-            <div className="flex flex-row max-w-[960px] items-center mx-auto my-6 justify-evenly ml-22">
+            <div className="flex flex-col md:flex-row max-w-[960px] items-center mx-auto my-6 justify-evenly">
               <img
                 src="data:image/jpeg;base64,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"
                 alt="idk"
@@ -405,7 +405,7 @@ export default function Home() {
                 className="rounded-xl z-20"
               />
               {/* Right text */}
-              <div className="max-w-[400px]">
+              <div className="max-w-[400px] mt-6 md:mt-0 md:ml-6 text-center md:text-left">
                 <img
                   src="https://static.vecteezy.com/system/resources/previews/009/970/457/original/eps10-grey-quotation-mark-icon-isolated-on-white-background-double-quotes-symbol-in-a-simple-flat-trendy-modern-style-for-your-website-design-logo-ui-pictogram-and-mobile-application-vector.jpg"
                   alt="logo"
@@ -413,12 +413,12 @@ export default function Home() {
                   height="40px"
                   className="-mb-2 mr-3"
                 />
-                <p className="font-mullish text-3xl opacity-60 leading-[2.75rem] font-extralight">
-                  One step solution of fire ,Safety, <br /> security equipment
+                <p className="font-mullish text-2xl opacity-60 leading-[2.75rem] font-extralight">
+                  One step solution of fire, Safety, <br /> security equipment
                   and services
                 </p>
 
-                <div className="flex flex-row">
+                <div className="flex flex-col items-center md:items-start">
                   <h3 className="font-mullish font-extrabold text-2xl">
                     Kiran Patel
                   </h3>
@@ -441,6 +441,7 @@ export default function Home() {
                   alt=""
                   width="80px"
                   height="40px"
+                  className="hidden md:block"
                 />
               </div>
             </div>
@@ -479,67 +480,105 @@ export default function Home() {
           {/* Testimonials */}
         </div>
 
-        {/* Contact Us Section */}
-        <div id="contactUs" className="bg-gradient-to-b bg-white">
-          <div className="container mx-auto py-12">
-            {/* Contact Form */}
-            <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-8 animate-fadeIn">
-              <h2 className="text-4xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
-                Contact Us
-              </h2>
-              <form onSubmit={handleSubmit}>
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-lg font-medium text-gray-800"
+        <div
+          id="contactUs"
+          className="bg-[url(https://static.vecteezy.com/system/resources/previews/029/318/220/non_2x/abstract-golden-wave-lines-png-transparent-free-vector.jpg)] bg-no-repeat bg-cover z-50 max-w-{size} relative bg-white min-h-screen py-12"
+         
+        >
+          <div className="container mx-auto px-2 font-mullish">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+              {" "}
+              
+              {/* Contact Form */}
+              <div className="w-full max-w-none bg-white shadow-lg p-8 animate-fadeIn">
+                <h2 className="text-4xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-black to bg-black">
+                  Contact Us
+                </h2>
+                <form onSubmit={handleSubmit}>
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="block text-lg font-medium text-gray-800 mt-3"
+                    >
+                      Name
+                    </label>
+                    <input
+                      id="name"
+                      type="text"
+                      className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-yellow-300 focus:ring-1 focus:ring-yellow-400"
+                      placeholder="Enter your name"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="Contact"
+                      className="block text-lg font-medium text-gray-800 mt-3"
+                    >
+                      Contact no:
+                    </label>
+                    <input
+                      id="Contact"
+                      type="tel"
+                      className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-yellow-300 focus:ring-1 focus:ring-yellow-400"
+                      placeholder="+91 xxxxxxxxxx"
+                      pattern="\d{5}\d{5}"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="message"
+                      className="block text-lg font-medium text-gray-800 mt-3"
+                    >
+                      Message
+                    </label>
+                    <textarea
+                      id="message"
+                      className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-yellow-300 focus:ring-1 focus:ring-yellow-400 h-32 resize-none"
+                      placeholder="Enter your message"
+                      required
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    className="bg-gradient-to-r mt-4 from-yellow-500 to-yellow-600 text-white py-2 px-6 rounded-md hover:bg-gradient-to-r hover:from-yellow-600 hover:to-yellow-700 transition duration-300"
                   >
-                    Name
-                  </label>
-                  <input
-                    id="name"
-                    type="text"
-                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
-                    placeholder="Enter your name"
-                    required
-                  />
+                    Send Message via Email
+                  </button>
+                </form>
+              </div>
+              {/* Contact Info and Map */}
+              <div className="w-full max-w-none bg-white">
+                {/* Map */}
+                <div className="mb-6 bg-white">
+                  <iframe
+                    title="Google Map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.7733070046584!2d72.3345043738156!3d23.2876854063857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c2298b5261e11%3A0xcd5944739c215411!2sTirth%20Arcade!5e0!3m2!1sen!2sin!4v1714312138646!5m2!1sen!2sin"
+                    width="100%"
+                    height="400"
+                    frameBorder="0"
+                    style={{ border: 0, maxWidth: "100%" }} // Ensure the map scales properly
+                    allowFullScreen=""
+                  ></iframe>
                 </div>
-                <div>
-                  <label
-                    htmlFor="Contact"
-                    className="block text-lg font-medium text-gray-800"
-                  >
-                    Contact no:
-                  </label>
-                  <input
-                    id="Contact"
-                    type="tel"
-                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
-                    placeholder="+91 xxxxxxxxxx"
-                    pattern="\d{5}\d{5}"
-                    required
-                  />
+                {/* Contact Information */}
+                <div className="bg-white p-2 shadow-lg">
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">
+                    Get in Touch
+                  </h2>
+                  <p className="text-gray-600 mb-3">
+                    <strong>Address:</strong> F/12 Tirth Arcade,
+                    Thol Road, Kadi, Dist. Mehsana, Gujarat, Pin Code: 382715
+                  </p>
+                  <p className="text-gray-600 mb-3">
+                    <strong>Phone:</strong> +1 234 567 890
+                  </p>
+                  <p className="text-gray-600 mb-3">
+                    <strong>Email:</strong> contact@yourcompany.com
+                  </p>
                 </div>
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-lg font-medium text-gray-800"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 h-32 resize-none"
-                    placeholder="Enter your message"
-                    required
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="bg-gradient-to-r mt-3 from-purple-500 to-pink-500 text-white py-2 px-6 rounded-md hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 transition duration-300"
-                >
-                  Send Message via Email
-                </button>
-              </form>
+              </div>
             </div>
           </div>
         </div>

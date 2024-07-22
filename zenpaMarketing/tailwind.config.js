@@ -35,6 +35,10 @@ export default {
         slideInUp: 'slideInUp 1s ease-in-out forwards',
         float: 'float 3s ease-in-out infinite',
       },
+
+      fontFamily:{
+        mullish:["Mulish","sans-serif"],
+      },
       
     },
   },
