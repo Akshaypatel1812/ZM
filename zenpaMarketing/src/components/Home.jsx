@@ -491,7 +491,7 @@ export default function Home() {
 
         <div
           id="contactUs"
-          className="bg-[url(https://static.vecteezy.com/system/resources/previews/029/318/220/non_2x/abstract-golden-wave-lines-png-transparent-free-vector.jpg)] bg-no-repeat bg-cover z-50 max-w-{size} relative bg-white min-h-screen py-1"
+          className="bg-[url(https://static.vecteezy.com/system/resources/previews/029/318/220/non_2x/abstract-golden-wave-lines-png-transparent-free-vector.jpg)] bg-no-repeat bg-cover z-20 max-w-{size} relative bg-white min-h-screen py-1"
         >
           <div className="container mx-auto px-2 font-mullish">
             <div className="md:grid-cols-2 gap-0">
