@@ -27,6 +27,10 @@ export default {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
         },
+        scroll: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
       },
       animation: {
         fadeIn: 'fadeIn 1s ease-in-out forwards',
@@ -34,6 +38,7 @@ export default {
         slideInRight: 'slideInRight 1s ease-in-out forwards',
         slideInUp: 'slideInUp 1s ease-in-out forwards',
         float: 'float 3s ease-in-out infinite',
+        scroll: 'scroll 20s linear infinite',
       },
 
       fontFamily:{

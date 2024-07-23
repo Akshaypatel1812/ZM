@@ -4,6 +4,7 @@ import { Link as ScrollLink } from "react-scroll";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faComments } from "@fortawesome/free-solid-svg-icons";
+import "../index.css";
 
 const phoneNumber = "+91-9054823690";
 const emailAddress = "zenpamarketing@gmail.com";
@@ -180,6 +181,21 @@ export default function Home() {
             </p>
           </div>
         </header>
+
+        <section>
+          <div className="border-t-2 border-gray-300 mt-6"></div>
+          <div className="App overflow-hidden whitespace-nowrap flex bg-orange-700 text-white h-16 items-center">
+            <div className="inline-block animate-scroll items-center">
+              <span className="text-2xl font-bold">
+                GST Number :- 24BWJPP6345P1ZS
+              </span>
+              <span className="text-2xl font-bold ml-96">
+                GST Number :- 24BWJPP6345P1ZS
+              </span>
+            </div>
+          </div>
+          <div className="border-t-2 border-gray-300"></div>
+        </section>
         {/* Our Services-2 */}
         <section className="bg-white shadow-md rounded-lg p-8 font-medium">
           <div className="w-full flex flex-col items-center mb-8">
@@ -318,17 +334,14 @@ export default function Home() {
 
         <div
           id="aboutUs"
-          className="container mx-auto py-12 bg-gradient-to-b bg-white"
+          className="container mx-auto rounded-lg py-12 bg-gradient-to-b bg-white"
         >
           {/* Company Introduction */}
-          <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-10 animate-fadeIn">
-            <h2
-              id="learn-more"
-              className="text-4xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-red-500"
-            >
+          <div className="max-w-5xl bg-white p-10 rounded-lg animate-fadeIn bg-[url(https://files.123freevectors.com/wp-content/original/202599-plain-white-background-design.jpg)] bg-no-repeat">
+            <h2 className="text-6xl font-bold mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r text-black">
               About Us
             </h2>
-            <p className="text-gray-700 text-lg leading-relaxed text-center">
+            <p className="text-gray-700 text-xl leading-relaxed">
               <strong>Zenpa Marketing</strong> is your trusted partner in
               workplace safety and security. Established in 2023, we specialize
               in providing top-notch fire fighting training services and fire
@@ -341,44 +354,40 @@ export default function Home() {
             </p>
           </div>
 
-          {/* GST Number */}
-          <div className="max-w-5xl mx-auto mt-16">
-            <h3 className="text-3xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500 animate-fadeIn">
-              GST Number
-            </h3>
-            <p className="text-center text-4xl font-bold text-gray-800 bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-blue-500 animate-fadeIn">
-              24BWJPP6345P1ZS
-            </p>
-          </div>
-
           {/* Mission, Vision, and Values */}
           <div className="container mx-auto py-12">
             <div className="max-w-5xl mx-auto">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-8">
                 <div className="bg-white shadow-lg rounded-lg p-8 hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 hover:scale-105 animate-slideInLeft">
-                  <h3 className="text-2xl font-bold text-orange-600 mb-4">
+                  <h3 className="text-2xl font-bold text-slate-700 mb-4">
                     Established in Year 2023
                   </h3>
-                  <p className="text-gray-700">
+                  <p className="text-gray-900 opacity-60">
                     Zenpa Marketing is a service provider and trader of fire
                     fighting training service and fire extinguishers, committed
                     to ensuring workplace safety and security.
                   </p>
                 </div>
+
+                <div className="hidden md:block w-0.5 bg-gray-300 lg:hidden"></div>
+
                 <div className="bg-white shadow-lg rounded-lg p-8 hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 hover:scale-105 animate-slideInUp">
-                  <h3 className="text-2xl font-bold text-orange-600 mb-4">
+                  <h3 className="text-2xl font-bold text-slate-700 mb-4">
                     Our Mission
                   </h3>
-                  <p className="text-gray-700">
+                  <p className="text-gray-900 opacity-60">
                     To offer top-quality fire safety equipment and solutions,
                     along with exceptional service, to businesses of all sizes.
                   </p>
                 </div>
+
+                <div className="hidden md:block w-0.5 bg-gray-300 lg:hidden"></div>
+
                 <div className="bg-white shadow-lg rounded-lg p-8 hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 hover:scale-105 animate-slideInRight">
-                  <h3 className="text-2xl font-bold text-orange-600 mb-4">
+                  <h3 className="text-2xl font-bold text-slate-700 mb-4">
                     Our Vision
                   </h3>
-                  <p className="text-gray-700">
+                  <p className="text-gray-900 opacity-60">
                     To be a leader in the fire safety industry, recognized for
                     our commitment to excellence and customer satisfaction.
                   </p>
@@ -387,8 +396,36 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Company Timeline */}
+          <div className="max-w-5xl mx-auto mt-12 ml-2">
+            <h3 className="text-3xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500 animate-fadeIn">
+              Our Journey
+            </h3>
+            <div className="flex flex-col gap-6">
+              <div className="relative pl-10 before:content-[''] before:absolute before:left-0 before:top-0 before:w-1 before:h-full before:bg-gradient-to-b from-purple-500 to-pink-500 after:content-[''] after:absolute after:left-[-0.5rem] after:top-0 after:w-3 after:h-3 after:bg-white after:border-4 after:border-purple-500 after:rounded-full animate-fadeIn">
+                <div className="bg-white shadow-lg rounded-lg p-6">
+                  <h4 className="text-xl font-bold text-gray-800 mb-2">2023</h4>
+                  <p className="text-gray-700">
+                    Zenpa Marketing was established with a vision to enhance
+                    workplace safety and security.
+                  </p>
+                </div>
+              </div>
+              <div className="relative pl-10 before:content-[''] before:absolute before:left-0 before:top-0 before:w-1 before:h-full before:bg-gradient-to-b from-purple-500 to-pink-500 after:content-[''] after:absolute after:left-[-0.5rem] after:top-0 after:w-3 after:h-3 after:bg-white after:border-4 after:border-purple-500 after:rounded-full animate-fadeIn delay-300">
+                <div className="bg-white shadow-lg rounded-lg p-6">
+                  <h4 className="text-xl font-bold text-gray-800 mb-2">2024</h4>
+                  <p className="text-gray-700">
+                    Expanded our services to include advanced fire fighting
+                    training and state-of-the-art fire extinguishers.
+                  </p>
+                </div>
+              </div>
+              {/* Add more timeline items as needed */}
+            </div>
+          </div>
+
           {/* CEO Section */}
-          <div className="relative w-11/12 max-w-[1500px] mx-auto py-10">
+          <div className="relative w-11/12 max-w-[1500px] mx-auto py-10 mt-16">
             <img
               src="https://static.vecteezy.com/system/resources/thumbnails/015/735/685/small_2x/design-halftone-white-grey-background-futuristic-grunge-pattern-dot-wave-modern-stylish-pop-art-texture-for-posters-sites-business-cards-covers-labels-mockup-vector.jpg"
               alt="dot"
@@ -449,48 +486,18 @@ export default function Home() {
             {/* Dot row */}
           </div>
 
-          {/* Company Timeline */}
-          <div className="max-w-5xl mx-auto mt-16 ml-2">
-            <h3 className="text-3xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500 animate-fadeIn">
-              Our Journey
-            </h3>
-            <div className="flex flex-col gap-6">
-              <div className="relative pl-10 before:content-[''] before:absolute before:left-0 before:top-0 before:w-1 before:h-full before:bg-gradient-to-b from-purple-500 to-pink-500 after:content-[''] after:absolute after:left-[-0.5rem] after:top-0 after:w-3 after:h-3 after:bg-white after:border-4 after:border-purple-500 after:rounded-full animate-fadeIn">
-                <div className="bg-white shadow-lg rounded-lg p-6">
-                  <h4 className="text-xl font-bold text-gray-800 mb-2">2023</h4>
-                  <p className="text-gray-700">
-                    Zenpa Marketing was established with a vision to enhance
-                    workplace safety and security.
-                  </p>
-                </div>
-              </div>
-              <div className="relative pl-10 before:content-[''] before:absolute before:left-0 before:top-0 before:w-1 before:h-full before:bg-gradient-to-b from-purple-500 to-pink-500 after:content-[''] after:absolute after:left-[-0.5rem] after:top-0 after:w-3 after:h-3 after:bg-white after:border-4 after:border-purple-500 after:rounded-full animate-fadeIn delay-300">
-                <div className="bg-white shadow-lg rounded-lg p-6">
-                  <h4 className="text-xl font-bold text-gray-800 mb-2">2024</h4>
-                  <p className="text-gray-700">
-                    Expanded our services to include advanced fire fighting
-                    training and state-of-the-art fire extinguishers.
-                  </p>
-                </div>
-              </div>
-              {/* Add more timeline items as needed */}
-            </div>
-          </div>
-
           {/* Testimonials */}
         </div>
 
         <div
           id="contactUs"
-          className="bg-[url(https://static.vecteezy.com/system/resources/previews/029/318/220/non_2x/abstract-golden-wave-lines-png-transparent-free-vector.jpg)] bg-no-repeat bg-cover z-50 max-w-{size} relative bg-white min-h-screen py-12"
-         
+          className="bg-[url(https://static.vecteezy.com/system/resources/previews/029/318/220/non_2x/abstract-golden-wave-lines-png-transparent-free-vector.jpg)] bg-no-repeat bg-cover z-50 max-w-{size} relative bg-white min-h-screen py-1"
         >
           <div className="container mx-auto px-2 font-mullish">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+            <div className="md:grid-cols-2 gap-0">
               {" "}
-              
               {/* Contact Form */}
-              <div className="w-full max-w-none bg-white shadow-lg p-8 animate-fadeIn">
+              <div className="w-10/12 max-w-none bg-white shadow-lg p-8 animate-fadeIn mx-auto">
                 <h2 className="text-4xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-black to bg-black">
                   Contact Us
                 </h2>
@@ -548,37 +555,6 @@ export default function Home() {
                   </button>
                 </form>
               </div>
-              {/* Contact Info and Map */}
-              <div className="w-full max-w-none bg-white">
-                {/* Map */}
-                <div className="mb-6 bg-white">
-                  <iframe
-                    title="Google Map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.7733070046584!2d72.3345043738156!3d23.2876854063857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c2298b5261e11%3A0xcd5944739c215411!2sTirth%20Arcade!5e0!3m2!1sen!2sin!4v1714312138646!5m2!1sen!2sin"
-                    width="100%"
-                    height="400"
-                    frameBorder="0"
-                    style={{ border: 0, maxWidth: "100%" }} // Ensure the map scales properly
-                    allowFullScreen=""
-                  ></iframe>
-                </div>
-                {/* Contact Information */}
-                <div className="bg-white p-2 shadow-lg">
-                  <h2 className="text-2xl font-bold text-gray-800 mb-4">
-                    Get in Touch
-                  </h2>
-                  <p className="text-gray-600 mb-3">
-                    <strong>Address:</strong> F/12 Tirth Arcade,
-                    Thol Road, Kadi, Dist. Mehsana, Gujarat, Pin Code: 382715
-                  </p>
-                  <p className="text-gray-600 mb-3">
-                    <strong>Phone:</strong> +1 234 567 890
-                  </p>
-                  <p className="text-gray-600 mb-3">
-                    <strong>Email:</strong> contact@yourcompany.com
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -589,7 +565,7 @@ export default function Home() {
           id="location"
           className="max-w-screen mx-auto text-center p-12 bg-white rounded-lg shadow-xl py-12"
         >
-          <h1 className="text-4xl mb-6 font-semibold text-from-purple-500">
+          <h1 className="text-4xl mb-6 font-semibold text-from-purple-500 -mt-14 sm:mt-0">
             Discover Us Here
           </h1>
 
@@ -614,8 +590,6 @@ export default function Home() {
               {/* Any additional elements can be added here */}
             </div>
           </div>
-
-          <div className="border-t-2 border-gray-300 mt-6"></div>
         </div>
 
         {/* Product section */}
@@ -635,7 +609,7 @@ export default function Home() {
               <div className="h-[300px] lg:h-[500px] w-full lg:w-[50%] relative overflow-hidden lg:order-2">
                 <div
                   style={{
-                    background: "linear-gradient(180deg,#f4f8ff,#fff0)",
+                    background: "linear-gradient(180deg,#ffffff,#fff0)",
                   }}
                   className="absolute h-[150px] w-full top-0 z-50"
                 ></div>
@@ -645,7 +619,7 @@ export default function Home() {
                   className="absolute object-cover h-full w-full animate-float"
                 />
                 <div
-                  style={{ background: "linear-gradient(0deg,#f4f8ff,#fff0)" }}
+                  style={{ background: "linear-gradient(0deg,#ffffff,#fff0)" }}
                   className="absolute h-[150px] w-full bottom-0 z-50"
                 ></div>
               </div>
