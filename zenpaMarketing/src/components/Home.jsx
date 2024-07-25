@@ -182,20 +182,7 @@ export default function Home() {
           </div>
         </header>
 
-        <section>
-          <div className="border-t-2 border-gray-300 mt-6"></div>
-          <div className="App overflow-hidden whitespace-nowrap flex bg-orange-700 text-white h-16 items-center">
-            <div className="inline-block animate-scroll items-center">
-              <span className="text-2xl font-bold">
-                GST Number :- 24BWJPP6345P1ZS
-              </span>
-              <span className="text-2xl font-bold ml-96">
-                GST Number :- 24BWJPP6345P1ZS
-              </span>
-            </div>
-          </div>
-          <div className="border-t-2 border-gray-300"></div>
-        </section>
+        <section></section>
         {/* Our Services-2 */}
         <section className="bg-white shadow-md rounded-lg p-8 font-medium">
           <div className="w-full flex flex-col items-center mb-8">
@@ -338,7 +325,7 @@ export default function Home() {
         >
           {/* Company Introduction */}
           <div className="max-w-5xl bg-white p-10 rounded-lg animate-fadeIn bg-[url(https://files.123freevectors.com/wp-content/original/202599-plain-white-background-design.jpg)] bg-no-repeat">
-            <h2 className="text-6xl font-bold mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r text-black">
+            <h2 className="text-6xl font-bold mb-8 text-gradient bg-clip-text bg-gradient-to-r text-black">
               About Us
             </h2>
             <p className="text-gray-700 text-xl leading-relaxed">
@@ -352,6 +339,19 @@ export default function Home() {
               industry, we are committed to excellence and customer
               satisfaction.
             </p>
+            <div className="App overflow-hidden whitespace-nowrap flex text-slate-700 h-10 items-center mt-10">
+              <div className="inline-block animate-scroll items-center">
+                <span className="text-2xl font-bold">
+                  GSTIN :- 24BWJPP6345P1ZS
+                </span>
+                <span className="text-2xl font-bold ml-96">
+                  GST Number :- 24BWJPP6345P1ZS
+                </span>
+                <span className="text-2xl font-bold ml-96">
+                  GST Number :- 24BWJPP6345P1ZS
+                </span>
+              </div>
+            </div>
           </div>
 
           {/* Mission, Vision, and Values */}
@@ -639,6 +639,9 @@ export default function Home() {
                     solutions, our products are designed to keep your employees
                     safe and your operations compliant.
                   </p>
+                  <a href="http://localhost:3000/download " className="bg-blue-500 text-white">
+                    <button>Download Catalogue</button>
+                  </a>
                   <div className="mt-7 flex justify-center lg:justify-start">
                     <button className="relative flex items-center justify-start bg-lightBlue text-white py-[14px] px-[18px] rounded-md font-mullish hover:bg-lightBlue500 transition-all duration-200 w-[9rem] h-12">
                       Explore Products

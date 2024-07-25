@@ -3,6 +3,8 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 dotenv.config({
   path:'.env'
@@ -25,6 +27,8 @@ const connectToDatabase = async () => {
   }
 };
 
+
+
 //connectToDatabase();
 
 // Model
@@ -39,18 +43,20 @@ const userSchema = new mongoose.Schema(
 
 const Contact = mongoose.model('Contact', userSchema);
 
-app.post('/submit-form', async (req, res) => {
-  const { name, contact, message } = req.body;
 
-  const newContact = new Contact({ name, contact, message });
 
-  try {
-    // Step where data is pushed to MongoDB
-    await newContact.save();
-    res.status(200).send({ success: true, message: 'Form submitted successfully!' ,newContact});
-  } catch (error) {
-    res.status(500).send({ success: false, error: error.message });
-  }
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.get('/download', (req, res) => {
+  const file = path.join(__dirname, 'files', 'ZM Product Catalogue.pdf');
+  console.log('File path:', file); // Add this line to debug the file path
+  res.download(file, 'Catalogue.pdf', (err) => {
+    if (err) {
+      console.error('Error:', err);
+      res.status(404).send('File not found');
+    }
+  });
 });
 
 const PORT = process.env.PORT || 4000;
