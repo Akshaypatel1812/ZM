@@ -43,14 +43,12 @@ const userSchema = new mongoose.Schema(
 
 const Contact = mongoose.model('Contact', userSchema);
 
-
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-app.get('/download', (req, res) => {
+app.get('/api/download', (req, res) => {
   const file = path.join(__dirname, 'files', 'ZM Product Catalogue.pdf');
-  console.log('File path:', file); // Add this line to debug the file path
+
   res.download(file, 'Catalogue.pdf', (err) => {
     if (err) {
       console.error('Error:', err);

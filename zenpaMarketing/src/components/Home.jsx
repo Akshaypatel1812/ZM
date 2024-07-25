@@ -639,7 +639,7 @@ export default function Home() {
                     solutions, our products are designed to keep your employees
                     safe and your operations compliant.
                   </p>
-                  <a href="http://localhost:3000/download " className="bg-blue-500 text-white">
+                  <a href="http://localhost:4000/api/download" className="bg-blue-500 text-white">
                     <button>Download Catalogue</button>
                   </a>
                   <div className="mt-7 flex justify-center lg:justify-start">
