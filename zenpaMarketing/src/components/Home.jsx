@@ -53,7 +53,7 @@ function handleSubmit(event) {
 }
 
 const handleDownload = () => {
-  fetch(`https://zenpamarketing.vercel.app/api/download`)
+  fetch(`https://zm-api.vercel.app/api/download`)
     .then((response) => {
       if (response.ok) {
         return response.blob();

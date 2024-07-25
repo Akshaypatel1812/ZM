@@ -7,8 +7,8 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 dotenv.config({
-  path:'.env'
-})
+  path: '.env'
+});
 
 const app = express();
 app.use(bodyParser.json());
@@ -16,8 +16,6 @@ app.use(cors({
   origin: ['http://localhost:4000', 'https://zenpamarketing.vercel.app'],
   optionsSuccessStatus: 200,
 }));
-
-
 
 const connectToDatabase = async () => {
   try {
@@ -33,8 +31,6 @@ const connectToDatabase = async () => {
 };
 
 
-
-//connectToDatabase();
 
 // Model
 const userSchema = new mongoose.Schema(
@@ -56,7 +52,7 @@ app.get('/api/download', (req, res) => {
   console.log('File path:', file); // Log the file path for debugging
 
   res.setHeader('Content-Type', 'application/pdf');
-  res.setHeader('Content-Disposition', 'attachment; filename=Catalogue.pdf');
+  res.setHeader('Content-Disposition', 'attachment; filename="Catalogue.pdf"');
 
   res.download(file, 'Catalogue.pdf', (err) => {
     if (err) {
