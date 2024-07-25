@@ -1,6 +1,16 @@
 {
-    "rewrites": [
-      { "source": "/api/(.*)", "destination": "https://zm-api.vercel.app/api/$1" }
+    "version": 2,
+    "builds": [
+      {
+        "src": "index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/index.js"
+      }
     ]
   }
   

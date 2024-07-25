@@ -53,7 +53,7 @@ function handleSubmit(event) {
 }
 
 const handleDownload = () => {
-  fetch(`https://zm-api.vercel.app/api/download`)
+  fetch('https://zm-backend.vercel.app/api/download')
     .then((response) => {
       if (response.ok) {
         return response.blob();
@@ -71,6 +71,7 @@ const handleDownload = () => {
     })
     .catch((error) => console.error('Download error:', error));
 };
+
 const products = [
   {
     id: 1,
