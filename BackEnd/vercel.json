@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+      { "source": "/api/(.*)", "destination": "https://zm-api.vercel.app/api/$1" }
+    ]
+  }
+  
