@@ -54,19 +54,23 @@ function handleSubmit(event) {
 
 const handleDownload = () => {
   fetch(`https://zenpamarketing.vercel.app/api/download`)
-    .then((response) => response.blob())
+    .then((response) => {
+      if (response.ok) {
+        return response.blob();
+      }
+      throw new Error('Network response was not ok.');
+    })
     .then((blob) => {
       const url = window.URL.createObjectURL(blob);
-      const a = document.createElement("a");
+      const a = document.createElement('a');
       a.href = url;
-      a.download = "Catalogue.pdf";
+      a.download = 'Catalogue.pdf';
       document.body.appendChild(a);
       a.click();
       a.remove();
     })
-    .catch((error) => console.error("Download error:", error));
+    .catch((error) => console.error('Download error:', error));
 };
-
 const products = [
   {
     id: 1,
