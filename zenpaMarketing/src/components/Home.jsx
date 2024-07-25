@@ -639,7 +639,14 @@ export default function Home() {
                     solutions, our products are designed to keep your employees
                     safe and your operations compliant.
                   </p>
-                 
+
+                  <a
+                    href="\ZM Product Catalogue.pdf" // Path to the PDF file in the public directory
+                    download="ZM Product Catalogue.pdf" // Name of the file when downloaded
+                    className="btn btn-primary" // Tailwind CSS class for styling
+                  >
+                    Download PDF
+                  </a>
                   <div className="mt-7 flex justify-center lg:justify-start">
                     <button className="relative flex items-center justify-start bg-lightBlue text-white py-[14px] px-[18px] rounded-md font-mullish hover:bg-lightBlue500 transition-all duration-200 w-[9rem] h-12">
                       Explore Products
