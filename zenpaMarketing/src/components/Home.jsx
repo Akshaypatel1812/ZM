@@ -52,6 +52,21 @@ function handleSubmit(event) {
   )}&body=${encodeURIComponent(body)}`;
 }
 
+const handleDownload = () => {
+  fetch(`https://zenpamarketing.vercel.app/api/download`)
+    .then((response) => response.blob())
+    .then((blob) => {
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "Catalogue.pdf";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    })
+    .catch((error) => console.error("Download error:", error));
+};
+
 const products = [
   {
     id: 1,
@@ -639,9 +654,12 @@ export default function Home() {
                     solutions, our products are designed to keep your employees
                     safe and your operations compliant.
                   </p>
-                  <a href="https://zenpamarketing.vercel.app/api/download" className="bg-blue-500 text-white">
-                    <button>Download Catalogue</button>
-                  </a>
+                  <button
+                    onClick={handleDownload}
+                    className="bg-blue-500 text-white"
+                  >
+                    Download Catalogue
+                  </button>
                   <div className="mt-7 flex justify-center lg:justify-start">
                     <button className="relative flex items-center justify-start bg-lightBlue text-white py-[14px] px-[18px] rounded-md font-mullish hover:bg-lightBlue500 transition-all duration-200 w-[9rem] h-12">
                       Explore Products

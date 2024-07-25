@@ -12,7 +12,12 @@ dotenv.config({
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:4000', 'https://zenpamarketing.vercel.app'],
+  optionsSuccessStatus: 200,
+}));
+
+
 
 const connectToDatabase = async () => {
   try {
