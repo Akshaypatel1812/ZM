@@ -163,7 +163,7 @@ export default function Home() {
         className="bg-white"
       >
         {/* Header new  */}
-        <header className="relative overflow-hidden" id="home">
+        {/* <header className="relative overflow-hidden" id="home">
           <div
             className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0"
             style={{
@@ -177,6 +177,27 @@ export default function Home() {
             </h1>
             <p className="text-lg md:text-xl text-white mb-8">
               One step solution of fire ,Safety and security equipment and
+              services
+            </p>
+          </div>
+        </header> */}
+
+        <header className="relative overflow-hidden" id="home">
+          <video
+            autoPlay
+            loop
+            muted
+            className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          >
+            <source src="\10332224-hd_2560_1440_25fps.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="container mx-auto text-center relative z-10 py-24">
+            <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4">
+              Welcome to Zenpa Marketing
+            </h1>
+            <p className="text-lg md:text-xl text-white mb-8">
+              One step solution of fire, Safety and security equipment and
               services
             </p>
           </div>
@@ -643,7 +664,7 @@ export default function Home() {
                   <a
                     href="/ZM Product Catalogue.pdf" // Correct path to the PDF file in the public directory
                     download="ZM Product Catalogue.pdf" // Name of the file when downloaded
-                     // Tailwind CSS class for styling
+                    // Tailwind CSS class for styling
                   >
                     <button className="relative flex items-center justify-start bg-blue-500 text-white py-[14px] px-[15px] rounded-md font-mullish hover:bg-blue-500 transition-all duration-200 w-[16rem] h-12 mt-8 font-bold">
                       Zenpa Product Catalogue
@@ -661,7 +682,6 @@ export default function Home() {
                       </svg>
                     </button>
                   </a>
-                  
                 </div>
               </div>
             </div>
