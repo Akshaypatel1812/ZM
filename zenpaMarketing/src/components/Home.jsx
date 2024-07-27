@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faComments } from "@fortawesome/free-solid-svg-icons";
 import "../index.css";
+import feather from "feather-icons";
 
 const phoneNumber = "+91-9054823690";
 const emailAddress = "zenpamarketing@gmail.com";
@@ -205,7 +206,7 @@ export default function Home() {
 
         <section></section>
         {/* Our Services-2 */}
-        <section className="bg-white shadow-md rounded-lg p-8 font-medium">
+        <section className="bg-white p-8 font-medium">
           <div className="w-full flex flex-col items-center mb-8">
             <h2 className="text-3xl lg:text-4xl text-center text-gray-800 mb-4 font-bold">
               Our Services
@@ -265,43 +266,107 @@ export default function Home() {
         {/* Why to Choose Us */}
         <section
           id="temp"
-          className="bg-white shadow-lg rounded-lg p-8 font-medium"
+          className="bg-gradient-to-b from-white bg-cover w-11/12 ctasection z-50 py-12"
         >
-          <h2 className="text-4xl lg:text-5xl text-center text-gray-800 mb-8 font-bold relative">
-            Why Choose Us?
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
-            <div className="flex items-center">
-              <span className="text-green-500 text-2xl">&#10004;</span>
-              <h3 className="text-xl lg:text-2xl text-gray-800 mb-0 ml-2 font-semibold">
-                Specialists in Industrial Fire Safety Equipment
-              </h3>
+          <div className="relative w-11/12 max-w-11/12 mx-auto flex flex-col lg:flex-row items-center justify-center lg:justify-between space-y-8 lg:space-y-0 lg:space-x-12 xl:space-x-24">
+            {/* Left part */}
+            <div className="w-11/12 lg:w-1/2 space-y-6 lg:mr-8 flex flex-col justify-center text-gray-800 mx-8">
+              <h4 className="font-mullish font-extrabold text-4xl md:text-5xl lg:text-5xl tracking-tight">
+                Why Choose to <span className="text-yellow-400"> Zenpa</span> <span className="text-blue-600"> Marketing ?</span>
+              </h4>
+              <div className="w-12 h-1 bg-lime-400"></div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-8">
+                <ul className="space-y-3 font-semibold text-gray-800">
+                  <li className="font-mullish flex items-center space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6 text-lime-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span>
+                      Specialists in Industrial Fire Safety Equipment.
+                    </span>
+                  </li>
+                  <li className="font-mullish flex items-center space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6 text-lime-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span>Expert Project Management for Fire Safety.</span>
+                  </li>
+                  <li className="font-mullish flex items-center space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6 text-lime-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span>Efficient Fire NOC & Documentation Services.</span>
+                  </li>
+                  <li className="font-mullish flex items-center space-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6 text-lime-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span>Clear and Compliant Safety Signboards.</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="flex items-center">
-              <span className="text-green-500 text-2xl">&#10004;</span>
-              <h3 className="text-xl lg:text-2xl text-gray-800 mb-0 ml-2 font-semibold">
-                Expert Project Management for Fire Safety
-              </h3>
-            </div>
-            <div className="flex items-center">
-              <span className="text-green-500 text-2xl">&#10004;</span>
-              <h3 className="text-xl lg:text-2xl text-gray-800 mb-0 ml-2 font-semibold">
-                Efficient Fire NOC & Documentation Services
-              </h3>
-            </div>
-            <div className="flex items-center">
-              <span className="text-green-500 text-2xl">&#10004;</span>
-              <h3 className="text-xl lg:text-2xl text-gray-800 mb-0 ml-2 font-semibold">
-                Clear and Compliant Safety Signboards
-              </h3>
+            {/* Right part with GIF */}
+            <div className="w-full lg:w-auto flex flex-col items-center justify-center relative mr-20">
+              <img
+                src="https://i.pinimg.com/originals/df/ef/88/dfef8872a1ff7ef3b80571ea4d536000.gif"
+                alt="Your GIF"
+                className="w-32 h-40 object-cover rounded-full mt-10 lg:mt-20 lg:mr-24 -mr-20"
+              />
+             
             </div>
           </div>
         </section>
+
         {/* At Zenpa Marketing */}
-        <section className="bg-gradient-to-b from-purple-900 to-indigo-900 bg-cover w-full ctasection z-50 py-12">
-          <div className="relative w-11/12 max-w-[1080px] mx-auto flex flex-col lg:flex-row items-center justify-center lg:justify-between space-y-8 lg:space-y-0 lg:space-x-12 xl:space-x-24">
+        <section className="bg-gradient-to-b from-white bg-cover w-11/12 ctasection z-50 py-14">
+          <div className="relative w-11/12 max-w-11/12 mx-auto flex flex-col lg:flex-row items-center justify-center lg:justify-between space-y-8 lg:space-y-0 lg:space-x-12 xl:space-x-24">
             {/* <!--left-part--> */}
-            <div className="lg:w-1/2 space-y-6 lg:mr-8 flex flex-col justify-center text-white mx-8">
+            <div className="lg:w-1/2 space-y-6 lg:mr-8 flex flex-col justify-center text-gray-800 mx-8">
               <h2 className="font-mullish font-extrabold text-4xl md:text-5xl lg:text-6xl tracking-tight">
                 At Zenpa Marketing
               </h2>
@@ -331,7 +396,7 @@ export default function Home() {
                   opacity="0.1"
                 />
               </svg>
-              <p className="font-mullish text-lg text-center text-lime-400">
+              <p className="font-mullish text-lg text-center text-lime-900">
                 Your Safety First
               </p>
             </div>
@@ -342,10 +407,10 @@ export default function Home() {
 
         <div
           id="aboutUs"
-          className="container mx-auto rounded-lg py-12 bg-gradient-to-b bg-white"
+          className="mx-auto rounded-lg py-12 bg-gradient-to-b bg-white w-11/12 max-w-10/12"
         >
           {/* Company Introduction */}
-          <div className="max-w-5xl bg-white p-10 rounded-lg animate-fadeIn bg-[url(https://files.123freevectors.com/wp-content/original/202599-plain-white-background-design.jpg)] bg-no-repeat">
+          <div className="w-11/12 max-w-11/12 bg-white p-10 rounded-lg animate-fadeIn bg-[url(https://files.123freevectors.com/wp-content/original/202599-plain-white-background-design.jpg)] bg-no-repeat">
             <h2 className="text-6xl font-bold mb-8 text-gradient bg-clip-text bg-gradient-to-r text-black">
               About Us
             </h2>
@@ -519,7 +584,7 @@ export default function Home() {
               {" "}
               {/* Contact Form */}
               <div className="w-10/12 max-w-none bg-white shadow-lg p-8 animate-fadeIn mx-auto">
-                <h2 className="text-4xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-black to bg-black">
+                <h2 className="text-4xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to bg-yellow-600">
                   Contact Us
                 </h2>
                 <form onSubmit={handleSubmit}>
