@@ -9,6 +9,7 @@ import Aboutus from './components/Aboutus.jsx';
 import Products from './components/Products.jsx';
 import Location from './components/Location.jsx';
 
+import FireExtinguisher from './components/FireExtinguisher.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +19,7 @@ const router = createBrowserRouter(
       <Route path="/aboutUs" element={<Aboutus />} />
       <Route path="/Products" element={<Products />} />
       <Route path="/location" element={<Location />} />
+      <Route path="/product/2" element={<FireExtinguisher />} />
     </Route>
   )
 );

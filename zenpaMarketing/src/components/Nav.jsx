@@ -54,10 +54,10 @@ const NavLinks = ({ onLinkClick }) => {
         to="products"
         smooth={true}
         duration={500}
-        className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2 mt-[-0.35rem] mr-2 focus:outline-none cursor-pointer"
+        className="text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2 mt-[-0.35rem] mr-2 focus:outline-none cursor-pointer items-center"
         onClick={onLinkClick}
       >
-        Our Products
+        Our Shop
       </ScrollLink>
     </>
   );

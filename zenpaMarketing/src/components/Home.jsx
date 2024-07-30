@@ -5,7 +5,14 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faComments } from "@fortawesome/free-solid-svg-icons";
 import "../index.css";
-import feather from "feather-icons";
+import FireExtinguisher from "./FireExtinguisher";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+  useParams,
+} from "react-router-dom";
 
 const phoneNumber = "+91-9054823690";
 const emailAddress = "zenpamarketing@gmail.com";
@@ -66,7 +73,7 @@ const products = [
     id: 2,
     name: "Fire Extinguishers",
     description:
-      "Be prepared for emergencies with our reliable fire extinguisher. Easy to use and effective, its a must-have for any workplace.",
+      "Be prepared for emergencies with our reliable fire extinguisher. Easy to use and effective, it's a must-have for any workplace.",
     image:
       "https://britanniaalarms.co.uk/wp-content/uploads/iStock-1188013372.jpg",
   },
@@ -90,35 +97,35 @@ const products = [
     id: 5,
     name: "Respiratory Protection",
     description:
-      "Stay safe with our respiratory gear. Breathable and reliable, its essential for workplace protection.",
+      "Stay safe with our respiratory gear. Breathable and reliable, it's essential for workplace protection.",
     image: "https://ohsonline.com/-/media/OHS/OHS/Images/2021/05/terpin.jpg",
   },
   {
     id: 6,
     name: "Hand Protection",
     description:
-      "Keep your hands safe with our protective gear.its essential for workplace safety.",
+      "Keep your hands safe with our protective gear. It's essential for workplace safety.",
     image:
       "https://assets-global.website-files.com/647888ca92d03e3fca3f1ea0/647888ca92d03e3fca3f2440_shutterstock_1547048333.jpg",
   },
   {
-    id: 5,
+    id: 7,
     name: "Smoke Detector System",
     description:
-      "Ensure safety with the Smoke Detector Systems advanced fire detection, real-time alerts, and easy installation.",
+      "Ensure safety with the Smoke Detector System's advanced fire detection, real-time alerts, and easy installation.",
     image: "https://cdn.hswstatic.com/gif/smoke-detector.jpg",
   },
   {
-    id: 7,
-    name: "CCTV cameras",
+    id: 8,
+    name: "CCTV Cameras",
     description:
-      "offer robust surveillance solutions, providing monitoring and security for homes, businesses, and public spaces.",
+      "Offer robust surveillance solutions, providing monitoring and security for homes, businesses, and public spaces.",
     image:
       "https://media.licdn.com/dms/image/D5612AQE6LuFc86nQ8g/article-cover_image-shrink_720_1280/0/1713351470524?e=2147483647&v=beta&t=-XsqA9_CEymucOL1WODkyZ01dJarLR-8Y7_2b9CkSS0",
   },
   {
-    id: 8,
-    name: "breathing apparatus",
+    id: 9,
+    name: "Breathing Apparatus",
     description:
       "Provides essential respiratory protection in hazardous environments, ensuring safety and peace of mind for users.",
     image:
@@ -136,6 +143,15 @@ const handleBuyNow = (product) => {
 };
 
 export default function Home() {
+  const navigate = useNavigate();
+  const { id } = useParams();
+
+  const handleOrderNow = (productId) => {
+    navigate(`/product/${productId}`);
+  };
+
+  const product = products.find((p) => p.id === parseInt(id));
+
   return (
     <>
       {/* WhatsApp Chat Button */}
@@ -205,74 +221,87 @@ export default function Home() {
         </header>
 
         <section></section>
-        {/* Our Services-2 */}
-        <section className="bg-white p-8 font-medium">
-          <div className="w-full flex flex-col items-center mb-8">
-            <h2 className="text-3xl lg:text-4xl text-center text-gray-800 mb-4 font-bold">
+        <section className="bg-white py-20">
+          <div className="w-11/12 mx-auto text-center mb-12">
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">
               Our Services
             </h2>
+            <p className="text-lg text-gray-500">
+              Tailored solutions to meet your fire safety needs.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-purple-400 to-pink-600 shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105">
-              <h3 className="text-xl lg:text-2xl text-white mb-4 font-semibold border-b-2 border-white pb-2">
-                Industrial Fire Safety Equipment
-              </h3>
-              <p className="text-gray-200">
-                High-quality equipment to ensure workplace safety
-              </p>
-            </div>
-            <div className="bg-gradient-to-br from-yellow-400 to-orange-500 shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105">
-              <h3 className="text-xl lg:text-2xl text-white mb-4 font-semibold border-b-2 border-white pb-2">
-                Fire Fighting Project Work
-              </h3>
-              <p className="text-gray-200">
-                Expert project management for fire safety implementations
-              </p>
-            </div>
-            <div className="bg-gradient-to-br from-blue-400 to-cyan-500 shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105">
-              <h3 className="text-xl lg:text-2xl text-white mb-4 font-semibold border-b-2 border-white pb-2">
-                Safety Signboard Work
-              </h3>
-              <p className="text-gray-200">
-                Clear and compliant safety signboards for workplaces
-              </p>
-            </div>
-            <div className="bg-gradient-to-br from-green-400 to-teal-500 shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105">
-              <h3 className="text-xl lg:text-2xl text-white mb-4 font-semibold border-b-2 border-white pb-2">
-                All Types of PPE's
-              </h3>
-              <p className="text-gray-200">
-                Personal Protective Equipment for various industries
-              </p>
-            </div>
-            <div className="bg-gradient-to-br from-pink-400 to-red-500 shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105">
-              <h3 className="text-xl lg:text-2xl text-white mb-4 font-semibold border-b-2 border-white pb-2">
-                Fire Safety Training Work
-              </h3>
-              <p className="text-gray-200">
-                Comprehensive training programs for fire safety awareness
-              </p>
-            </div>
-            <div className="bg-gradient-to-br from-indigo-400 to-purple-500 shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105">
-              <h3 className="text-xl lg:text-2xl text-white mb-4 font-semibold border-b-2 border-white pb-2">
-                CCTV Camera Installation, AMC, & Service
-              </h3>
-              <p className="text-gray-200">
-                Installation, maintenance, and servicing of CCTV systems
-              </p>
-            </div>
+          <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            {[
+              {
+                title: "Industrial Fire Safety Equipment",
+                description:
+                  "High-quality equipment to ensure workplace safety",
+                gradient: "from-indigo-500 via-purple-500 to-pink-500",
+                icon: "fire-extinguisher",
+              },
+              {
+                title: "Fire Fighting Project Work",
+                description:
+                  "Expert project management for fire safety implementations",
+                gradient: "from-green-400 via-teal-500 to-blue-500",
+                icon: "fire-alt",
+              },
+              {
+                title: "Safety Signboard Work",
+                description:
+                  "Clear and compliant safety signboards for workplaces",
+                gradient: "from-yellow-400 via-orange-500 to-red-500",
+                icon: "sign",
+              },
+              {
+                title: "All Types of PPE's",
+                description:
+                  "Personal Protective Equipment for various industries",
+                gradient: "from-blue-400 via-cyan-500 to-teal-500",
+                icon: "hard-hat",
+              },
+              {
+                title: "Fire Safety Training Work",
+                description:
+                  "Comprehensive training programs for fire safety awareness",
+                gradient: "from-pink-400 via-red-500 to-yellow-500",
+                icon: "chalkboard-teacher",
+              },
+              {
+                title: "CCTV Camera Installation, AMC, & Service",
+                description:
+                  "Installation, maintenance, and servicing of CCTV systems",
+                gradient: "from-gray-700 via-gray-900 to-black",
+                icon: "video",
+              },
+            ].map((service, index) => (
+              <div
+                key={index}
+                className={`relative bg-gradient-to-tr ${service.gradient} shadow-2xl rounded-xl p-8 transform transition-transform duration-300 hover:scale-105 hover:shadow-3xl`}
+              >
+                <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
+                  
+                </div>
+                <h3 className=" text-2xl text-white mb-4 font-semibold">
+                  {service.title}
+                </h3>
+                <p className="text-gray-200">{service.description}</p>
+              </div>
+            ))}
           </div>
         </section>
+
         {/* Why to Choose Us */}
         <section
           id="temp"
-          className="bg-gradient-to-b from-white bg-cover w-11/12 ctasection z-50 py-12"
+          className="relative bg-gradient-to-b from-white bg-cover w-11/12 ctasection z-50 py-1 mx-auto"
         >
           <div className="relative w-11/12 max-w-11/12 mx-auto flex flex-col lg:flex-row items-center justify-center lg:justify-between space-y-8 lg:space-y-0 lg:space-x-12 xl:space-x-24">
             {/* Left part */}
-            <div className="w-11/12 lg:w-1/2 space-y-6 lg:mr-8 flex flex-col justify-center text-gray-800 mx-8">
+            <div className="w-11/12 lg:w-1/2 space-y-6 lg:mr-8 flex flex-col justify-center text-gray-800 ">
               <h4 className="font-mullish font-extrabold text-4xl md:text-5xl lg:text-5xl tracking-tight">
-                Why Choose to <span className="text-yellow-400"> Zenpa</span> <span className="text-blue-600"> Marketing ?</span>
+                Why Choose to <span className="text-yellow-400"> Zenpa</span>{" "}
+                <span className="text-blue-600"> Marketing ?</span>
               </h4>
               <div className="w-12 h-1 bg-lime-400"></div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-8">
@@ -355,30 +384,30 @@ export default function Home() {
               <img
                 src="https://i.pinimg.com/originals/df/ef/88/dfef8872a1ff7ef3b80571ea4d536000.gif"
                 alt="Your GIF"
-                className="w-32 h-40 object-cover rounded-full mt-10 lg:mt-20 lg:mr-24 -mr-20"
+                className="w-32 h-40 object-cover rounded-full mt-10 lg:mt-10 lg:mr-24 -mr-20"
               />
-             
             </div>
           </div>
+
+          
         </section>
 
-        {/* At Zenpa Marketing */}
-        <section className="bg-gradient-to-b from-white bg-cover w-11/12 ctasection z-50 py-14">
+        <section className="bg-gradient-to-b from-white mx-auto bg-cover ctasection z-50 py-14 bg-blue-400 lg:bg-blue-400 sm:bg-white overflow-hidden">
           <div className="relative w-11/12 max-w-11/12 mx-auto flex flex-col lg:flex-row items-center justify-center lg:justify-between space-y-8 lg:space-y-0 lg:space-x-12 xl:space-x-24">
             {/* <!--left-part--> */}
-            <div className="lg:w-1/2 space-y-6 lg:mr-8 flex flex-col justify-center text-gray-800 mx-8">
+            <div className="lg:w-1/2 space-y-6 flex flex-col justify-center text-gray-800 mx-auto lg:mx-0">
               <h2 className="font-mullish font-extrabold text-4xl md:text-5xl lg:text-6xl tracking-tight">
                 At Zenpa Marketing
               </h2>
               <div className="w-12 h-1 bg-lime-400"></div>
-              <p className="font-mullish text-lg md:text-xl lg:text-2xl leading-relaxed md:leading-snug lg:leading-normal xl:text-3xl xl:leading-relaxed border-l-4 border-lime-400 pl-6">
+              <p className="text-gray-800 font-mullish text-lg md:text-xl lg:text-2xl leading-relaxed md:leading-snug lg:leading-normal xl:text-3xl xl:leading-relaxed border-l-4 border-lime-400 pl-6">
                 We are committed to ensuring the safety and security of your
                 workplace. Choose us for unmatched expertise, top-quality
                 products, and exceptional service that puts your safety first.
               </p>
             </div>
             {/* <!--right-part (optional)--> */}
-            <div className="hidden lg:flex lg:flex-col items-center justify-center relative">
+            <div className="hidden lg:flex lg:flex-col items-center justify-center relative mx-auto">
               <div className="rounded-full bg-lime-400 w-32 h-32 opacity-50 animate-bounce mb-4"></div>
               <svg
                 className="absolute -bottom-20 -right-20 text-lime-400"
@@ -396,8 +425,8 @@ export default function Home() {
                   opacity="0.1"
                 />
               </svg>
-              <p className="font-mullish text-lg text-center text-lime-900">
-                Your Safety First
+              <p className="font-mullish text-lg text-center text-white font-semibold z-10">
+                Your Safety, Our Commitment
               </p>
             </div>
           </div>
@@ -407,10 +436,10 @@ export default function Home() {
 
         <div
           id="aboutUs"
-          className="mx-auto rounded-lg py-12 bg-gradient-to-b bg-white w-11/12 max-w-10/12"
+          className="mx-auto rounded-lg py-12 bg-gradient-to-b bg-white w-11/12 max-w-11/12"
         >
           {/* Company Introduction */}
-          <div className="w-11/12 max-w-11/12 bg-white p-10 rounded-lg animate-fadeIn bg-[url(https://files.123freevectors.com/wp-content/original/202599-plain-white-background-design.jpg)] bg-no-repeat">
+          <div className="mx-auto w-11/12 max-w-11/12 bg-white p-10 rounded-lg animate-fadeIn bg-[url(https://files.123freevectors.com/wp-content/original/202599-plain-white-background-design.jpg)] bg-no-repeat">
             <h2 className="text-6xl font-bold mb-8 text-gradient bg-clip-text bg-gradient-to-r text-black">
               About Us
             </h2>
@@ -483,7 +512,7 @@ export default function Home() {
           </div>
 
           {/* Company Timeline */}
-          <div className="max-w-5xl mx-auto mt-12 ml-2">
+          <div className="max-w-5xl mx-auto mt-12">
             <h3 className="text-3xl font-bold text-center mb-8 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500 animate-fadeIn">
               Our Journey
             </h3>
@@ -511,73 +540,75 @@ export default function Home() {
           </div>
 
           {/* CEO Section */}
-          <div className="relative w-11/12 max-w-[1500px] mx-auto py-10 mt-16">
-            <img
-              src="https://static.vecteezy.com/system/resources/thumbnails/015/735/685/small_2x/design-halftone-white-grey-background-futuristic-grunge-pattern-dot-wave-modern-stylish-pop-art-texture-for-posters-sites-business-cards-covers-labels-mockup-vector.jpg"
-              alt="dot"
-              className="absolute w-[200px] top-[2rem] left-[0rem] z-10"
-            />
-
-            {/* Main part */}
-            <div className="flex flex-col md:flex-row max-w-[960px] items-center mx-auto my-6 justify-evenly">
+          <section className=" mx-auto">
+            <div className="relative w-11/12 max-w-11/12 mx-auto py-10 mt-16">
               <img
-                src="data:image/jpeg;base64,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"
-                alt="idk"
-                width="320px"
-                height="320px"
-                className="rounded-xl z-20"
+                src="https://static.vecteezy.com/system/resources/thumbnails/015/735/685/small_2x/design-halftone-white-grey-background-futuristic-grunge-pattern-dot-wave-modern-stylish-pop-art-texture-for-posters-sites-business-cards-covers-labels-mockup-vector.jpg"
+                alt="dot"
+                className="absolute w-[200px] top-[2rem] left-[0rem] z-10"
               />
-              {/* Right text */}
-              <div className="max-w-[400px] mt-6 md:mt-0 md:ml-6 text-center md:text-left">
-                <img
-                  src="https://static.vecteezy.com/system/resources/previews/009/970/457/original/eps10-grey-quotation-mark-icon-isolated-on-white-background-double-quotes-symbol-in-a-simple-flat-trendy-modern-style-for-your-website-design-logo-ui-pictogram-and-mobile-application-vector.jpg"
-                  alt="logo"
-                  width="35px"
-                  height="40px"
-                  className="-mb-2 mr-3"
-                />
-                <p className="font-mullish text-2xl opacity-60 leading-[2.75rem] font-extralight">
-                  One step solution of fire, Safety, <br /> security equipment
-                  and services
-                </p>
 
-                <div className="flex flex-col items-center md:items-start">
-                  <h3 className="font-mullish font-extrabold text-2xl">
-                    Kiran Patel
-                  </h3>
+              {/* Main part */}
+              <div className="flex flex-col md:flex-row max-w-[960px] items-center mx-auto my-6 justify-evenly">
+                <img
+                  src="data:image/jpeg;base64,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"
+                  alt="idk"
+                  width="320px"
+                  height="320px"
+                  className="rounded-xl z-20"
+                />
+                {/* Right text */}
+                <div className="max-w-[400px] mt-6 md:mt-0 md:ml-6 text-center md:text-left">
+                  <img
+                    src="https://static.vecteezy.com/system/resources/previews/009/970/457/original/eps10-grey-quotation-mark-icon-isolated-on-white-background-double-quotes-symbol-in-a-simple-flat-trendy-modern-style-for-your-website-design-logo-ui-pictogram-and-mobile-application-vector.jpg"
+                    alt="logo"
+                    width="35px"
+                    height="40px"
+                    className="-mb-2 mr-3"
+                  />
+                  <p className="font-mullish text-2xl opacity-60 leading-[2.75rem] font-extralight">
+                    One step solution of fire, Safety, <br /> security equipment
+                    and services
+                  </p>
+
+                  <div className="flex flex-col items-center md:items-start">
+                    <h3 className="font-mullish font-extrabold text-2xl">
+                      Kiran Patel
+                    </h3>
+                  </div>
+                  <p className="font-mullish font-medium mt-1">
+                    Founder, Zenpa Marketing
+                  </p>
+                  <a
+                    href="https://www.linkedin.com/in/kiran-patel-ehs-executive/"
+                    className="text-grayText italic underline text-blue-500"
+                  >
+                    Learn More
+                  </a>
+                  <p className="text-gray-700 mb-2 font-bold">
+                    PDIS || PDIETM || Safety, Environment & Health Management ||
+                    Ahmedabad
+                  </p>
+                  <img
+                    src="https://st.depositphotos.com/1519283/4185/v/450/depositphotos_41852543-stock-illustration-safety-first-vector-sign.jpg"
+                    alt=""
+                    width="80px"
+                    height="40px"
+                    className="hidden md:block"
+                  />
                 </div>
-                <p className="font-mullish font-medium mt-1">
-                  Founder, Zenpa Marketing
-                </p>
-                <a
-                  href="https://www.linkedin.com/in/kiran-patel-ehs-executive/"
-                  className="text-grayText italic underline text-blue-500"
-                >
-                  Learn More
-                </a>
-                <p className="text-gray-700 mb-2 font-bold">
-                  PDIS || PDIETM || Safety, Environment & Health Management ||
-                  Ahmedabad
-                </p>
-                <img
-                  src="https://st.depositphotos.com/1519283/4185/v/450/depositphotos_41852543-stock-illustration-safety-first-vector-sign.jpg"
-                  alt=""
-                  width="80px"
-                  height="40px"
-                  className="hidden md:block"
-                />
               </div>
-            </div>
 
-            {/* Dot row */}
-          </div>
+              {/* Dot row */}
+            </div>
+          </section>
 
           {/* Testimonials */}
         </div>
 
         <div
           id="contactUs"
-          className="bg-[url(https://static.vecteezy.com/system/resources/previews/029/318/220/non_2x/abstract-golden-wave-lines-png-transparent-free-vector.jpg)] bg-no-repeat bg-cover z-20 max-w-{size} relative bg-white min-h-screen py-1"
+          className="bg-[url(https://static.vecteezy.com/system/resources/previews/029/318/220/non_2x/abstract-golden-wave-lines-png-transparent-free-vector.jpg)] bg-no-repeat bg-cover z-20 max-w-{size} relative bg-white min-h-screen py-8"
         >
           <div className="container mx-auto px-2 font-mullish">
             <div className="md:grid-cols-2 gap-0">
@@ -649,7 +680,7 @@ export default function Home() {
 
         <div
           id="location"
-          className="max-w-screen mx-auto text-center p-12 bg-white rounded-lg shadow-xl py-12"
+          className="max-w-screen mx-auto text-center p-12 bg-white rounded-lg shadow-xl mt-20"
         >
           <h1 className="text-4xl mb-6 font-semibold text-from-purple-500 -mt-14 sm:mt-0">
             Discover Us Here
@@ -731,7 +762,7 @@ export default function Home() {
                     download="ZM Product Catalogue.pdf" // Name of the file when downloaded
                     // Tailwind CSS class for styling
                   >
-                    <button className="relative flex items-center justify-start bg-blue-500 text-white py-[14px] px-[15px] rounded-md font-mullish hover:bg-blue-500 transition-all duration-200 w-[16rem] h-12 mt-8 font-bold">
+                    <button className="relative flex items-center justify-start bg-blue-500 hover:bg-blue-600 text-white py-[14px] px-[15px] rounded-md font-mullish transition-all duration-200 w-[16rem] h-12 mt-8 font-bold">
                       Zenpa Product Catalogue
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -752,29 +783,59 @@ export default function Home() {
             </div>
           </section>
 
-          <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((product) => (
-              <div
-                key={product.id}
-                className="bg-white shadow-lg rounded-lg overflow-hidden transition duration-300 transform hover:scale-105"
-              >
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-                  <p className="text-gray-700 mb-4">{product.description}</p>
+          <div className="container mx-auto p-6">
+            {id ? (
+              // Product Detail View
+              product ? (
+                <div>
+                  <h1 className="text-2xl font-bold">{product.name}</h1>
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-64 object-cover"
+                  />
+                  <p className="mt-4">{product.description}</p>
                   <button
-                    className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300"
-                    onClick={() => handleBuyNow(product)}
+                    className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 mt-4"
+                    onClick={() => navigate("/")}
                   >
-                    Order Now
+                    Back to Products
                   </button>
                 </div>
+              ) : (
+                <div>Product not found</div>
+              )
+            ) : (
+              // Product List View
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {products.map((product) => (
+                  <div
+                    key={product.id}
+                    className="bg-white shadow-lg rounded-lg overflow-hidden transition duration-300 transform hover:scale-105"
+                  >
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-64 object-cover"
+                    />
+                    <div className="p-6">
+                      <h3 className="text-xl font-semibold mb-2">
+                        {product.name}
+                      </h3>
+                      <p className="text-gray-700 mb-4">
+                        {product.description}
+                      </p>
+                      <button
+                        className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300"
+                        onClick={() => handleOrderNow(product.id)}
+                      >
+                        Order Now
+                      </button>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            )}
           </div>
         </div>
       </motion.div>
