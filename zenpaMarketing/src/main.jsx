@@ -10,6 +10,10 @@ import Products from './components/Products.jsx';
 import Location from './components/Location.jsx';
 
 import FireExtinguisher from './components/FireExtinguisher.jsx';
+import SafetyHelmet from './components/SafetyHelmet.jsx'
+import EyeProtection from './components/EyeProtection.jsx';
+import RespiratoryProtection from './components/RespiratoryProtection.jsx';
+import HandProtection from './components/HandProtection.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +24,10 @@ const router = createBrowserRouter(
       <Route path="/Products" element={<Products />} />
       <Route path="/location" element={<Location />} />
       <Route path="/product/2" element={<FireExtinguisher />} />
+      <Route path="/product/1" element={< SafetyHelmet/>} />
+      <Route path="/product/4" element={< EyeProtection/>} />
+      <Route path="/product/5" element={< RespiratoryProtection/>} />
+      <Route path="/product/6" element={< HandProtection/>} />
     </Route>
   )
 );
